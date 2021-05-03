@@ -1,5 +1,5 @@
 /* 레이아웃 구조 */
-.container{
+.main-container{
 	width: auto;
 	margin: auto;
 	background: #fff;
@@ -17,27 +17,19 @@
 	justify-content: space-around;
 }
 .main{
-	background-color: lightyellow;
+	background-color: white;
 	width: 100%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .footer{
+	padding: 20px;
 	clear: both;
 	background: darkgray;
-	height: 100px;
-}
-
-/* 미디어 쿼리 */
-/* @media (max-width: 480px) {
-  .container {
-    width: auto;
-  }
-  .content {
-    float: none;
-    width: auto;
+	font-size:11px;
+	z-index:12;
+	text-align: center;
 	}
-} */
 
 /* 로고 */
 .logo{float: left; padding: 0px 0px 0px 30px; cursor: pointer;}
@@ -113,10 +105,28 @@
 .slide input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
 .slide input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
 
-/* 페이징 */
-/* .slide-pagelist {text-align: center; padding: 10px;}
-.slide-pagelist > li {display:inline-block; vertical-align: middle;}
-.slide-pagelist > li > label {display: block; padding:5px 25px; border-radius: 30px; background: #ccc; margin:0px 10px; cursor: pointer;}
-.slide input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
-.slide input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
-.slide input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;} */
+/* 아이콘1-마우스 */
+.icon1{width: 100%; padding: 10px; text-align: center;}
+.icon1 img{padding: 10px;}
+
+/* 그리드 컨테이너 */
+.grid-container {
+	padding: 80px 0px 20px 0px;
+	display: grid;
+	grid-template-columns: 250px 250px 250px 250px;
+	grid-template-rows: repeat(1, minmax(300px, auto));
+	gap: 20px;
+	place-items: center center;
+	place-content: center center;
+}
+.grid-container img {
+	display: block;
+	width: 250px;
+	height: 250px;
+	object-fit: fill;
+}
+.grid-container>div>a:hover img{
+	filter: brightness(70%);
+}
+
+/* 사용자 추천 전시회 */
