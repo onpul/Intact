@@ -1,20 +1,19 @@
 /* 레이아웃 구조 */
 .main-container{
-	width: auto;
+	width: 100%;
 	margin: auto;
 	background: #fff;
 }
 .header{
-	background: #EAEAEA;
-	width: 100%;
-	height: 100px;
-	z-index: 1;
+  background: #EAEAEA;
+  height: 100px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.header{
-	display: flex;
-	align-items: center;
-	position: relative;
-	justify-content: space-around;
+.nav{
+  display: flex;
 }
 .main{
 	background-color: white;
@@ -24,7 +23,6 @@
 }
 .footer{
 	padding: 20px;
-	clear: both;
 	background: darkgray;
 	font-size:11px;
 	z-index:12;
@@ -32,53 +30,35 @@
 	}
 
 /* 로고 */
-.logo{float: left; padding: 0px 0px 0px 30px; cursor: pointer;}
+.logo{
+  cursor: pointer;
+  padding: 10px;
+}
 .logo img{width: 100px;}
 
 /* 네비게이션 */
 .nav{
 	height: 100px;
-	position: relative;
-	display: flex;
-	flex-direction: row;
 	align-items: center;
-	border: 0;
-	justify-content: space-between;
-	z-index: 1;
+}
+.nav ul{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.nav li a{
+  white-space: nowrap;
+  display: inline-block;
+  padding: 10px;
+  color: #222;
+  font-size: 12px;
 }
 .nav li:hover > ul{display: block;}
 .nav li a:hover{text-decoration: underline;}
-.nav li a{
-  display: inline-block;
-  padding: 20px 25px;
-  color: #222;
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-	white-space:nowrap;
-}
-.nav ul{
-  display: none;
-  background: #fff;
-  position: absolute;
-  top: 100%;
-  box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
-  border: 1px solid rgba(0,0,0,.1);
-	z-index: -5;
-}
-.nav ul li{
-	position: relative;
-}
-.nav ul li a{
-	padding: 20px 30px;
-	border-bottom: 1px solid rgba(0,0,0,.05);
-}
+
 
 /* 검색창 */
-.search-form{float: left; padding: 30px 30px 30px;}
-.search-form{max-width: 50%;}
-.search-form input{padding: 10px; width: 400px; height: 40px; border: 0; border-radius: 60px;}
+.search-form{display: flex; float: left; min-width: 30%; padding: 30px 30px 30px;}
+.search-form input{padding: 12px; width: 40%; height: 40px; border: 0; border-radius: 60px;}
 .search-form input:focus{outline:none;}
 .search-form input[type="search"] {flex: 1; min-width: 0;}
 
@@ -106,26 +86,30 @@
 .slide input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
 
 /* 아이콘1-마우스 */
-.icon1{width: 100%; padding: 10px; text-align: center;}
+.icon1{padding: 10px; text-align: center;}
 .icon1 img{padding: 10px;}
 
-/* 그리드 컨테이너 */
-.grid-container {
-	padding: 80px 0px 20px 0px;
-	display: grid;
-	grid-template-columns: 250px 250px 250px 250px;
-	grid-template-rows: repeat(1, minmax(300px, auto));
-	gap: 20px;
-	place-items: center center;
-	place-content: center center;
+/* 갤러리 컨테이너 */
+.gallery-container {
+ 	padding: 50px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: center;
 }
-.grid-container img {
-	display: block;
-	width: 250px;
-	height: 250px;
-	object-fit: fill;
+.gallery-container a {
+	margin-top: 20px;
+	flex-grow: 0;
+	flex-basis: 200px;
+	max-width: 200px;
 }
-.grid-container>div>a:hover img{
+.gallery-container img {
+	height: 200px;
+	width: 200px;
+}
+.gallery-container> a:hover img{
 	filter: brightness(70%);
 }
 
