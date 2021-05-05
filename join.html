@@ -22,17 +22,14 @@
       flex-direction: column;
       align-items: center;
     }
-    .join-input-wrap{
+    .join-box{
       width: 460px;
       height: 48px;
       border: solid 1px;
       border-radius: 10px;
       background: white;
     }
-    .password-wrap{
-    	margin-top: 15px;
-    }
-    .join-input-wrap input{
+    .join-box input{
     	border: none;
     	width:440px;
     	margin-top: 8px;
@@ -41,40 +38,54 @@
     	height:30px;
 			outline: none;
     }
-		.email-input-wrap{
-    	margin-top: 15px;
-    }
-		.email-input-wrap{
-      width: 460px;
-      height: 48px;
-      border: solid 1px;
-      border-radius: 10px;
-      background: white;
-    }
-		.email-input-wrap input{
-    	border: none;
-    	width:440px;
-    	margin-top: 8px;
-    	font-size: 12px;
-    	margin-left: 12px;
-    	height:30px;
+		.password-box{
+			width: 460px;
+			height: 48px;
+			border: solid 1px;
+			border-radius: 10px;
+			background: white;
+			margin-top: 15px;
+		}
+		.password-box input{
+			border: none;
+			width:440px;
+			margin-top: 8px;
+			font-size: 12px;
+			margin-left: 12px;
+			height:30px;
 			outline: none;
-    }
-    .join-button-wrap {
-    	padding-top: 15px;
-    }
-    .join-button-wrap button{
+		}
+		.email-box{
+			width: 460px;
+			height: 48px;
+			border: solid 1px;
+			border-radius: 10px;
+			background: white;
+			margin-top: 15px;
+		}
+		.email-box input{
+			border: none;
+			width:440px;
+			margin-top: 8px;
+			font-size: 12px;
+			margin-left: 12px;
+			height:30px;
+			outline: none;
+		}
+		.join-agree{
+			width: 460px;
+			margin-top: 10px;
+		}
+    .join-button {
     	width: 460px;
     	height: 48px;
+			margin-top: 15px;
     	font-size: 18px;
 			color: white;
     	background: red;
     	border: solid 1px red;
       border-radius: 10px;
     }
-		.join-button-wrap button a{
-			color: white;
-		}
 		.join-etc {
 			width: 460px;
 		}
@@ -118,27 +129,35 @@
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
-		<div class="main">
-      <section class="join-container">
-				<div class="textbox">회원가입</div>
-				<div class="join-input-wrap">
-					<input placeholder="아이디" type="text"></input>
+		<div class="join-container">
+			<div class="textbox">회원가입</div>
+			<form method="post" id="" action="">
+				<div class="join-box">
+					<label for="join-id"></label>
+					<input type="text" id="joinid" name="joinid" placeholder="아이디">
 				</div>
-				<div class="join-input-wrap password-wrap">
-					<input placeholder="비밀번호" type="password"></input>
+				<div class="password-box">
+					<label for="join-pw"></label>
+					<input type="password" id="joinpw" name="joinpw" placeholder="비밀번호">
 				</div>
-				<div class="email-input-wrap">
-					<input placeholder="이메일 주소 예) sungkyul@naver.com" type="text"></input>
+				<div class="email-box">
+					<label for="join-email"></label>
+					<input type="email" id="join-email" name="join-email" placeholder="이메일 주소 예) sungkyul@naver.com">
 				</div>
-				<div class="join-button-wrap">
-					<button><a href="#">회원가입</a></button>
+				<div class="join-agree">
+				<label for="joinagree">
+					<input type="checkbox" id="joinagree" class="inp_radio"  name="joinagree"> 개인정보 사용 동의
+				</label>
+				</div>
+				<div class="join-botton">
+					<button type="submit" class="join-button">회원가입</button>
 				</div>
 				<div class="join-etc">
 					<ul>
 						<li><a href="login.html">이미 회원가입을 했다면? 로그인</a></li>
 					</ul>
 				</div>
-			</section>
+			</form>
 		</div>
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->

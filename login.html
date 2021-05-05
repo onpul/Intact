@@ -22,17 +22,14 @@
       flex-direction: column;
       align-items: center;
     }
-    .login-input-wrap{
+    .login-box{
       width: 460px;
       height: 48px;
       border: solid 1px;
       border-radius: 10px;
       background: white;
     }
-    .password-wrap{
-    	margin-top: 15px;
-    }
-    .login-input-wrap input{
+    .login-box input{
     	border: none;
     	width:440px;
     	margin-top: 8px;
@@ -41,21 +38,33 @@
     	height:30px;
 			outline: none;
     }
-    .login-button-wrap {
-    	padding-top: 15px;
-    }
-    .login-button-wrap button{
+		.password-box{
+			width: 460px;
+			height: 48px;
+			border: solid 1px;
+			border-radius: 10px;
+			background: white;
+			margin-top: 15px;
+		}
+		.password-box input{
+			border: none;
+			width:440px;
+			margin-top: 8px;
+			font-size: 12px;
+			margin-left: 12px;
+			height:30px;
+			outline: none;
+		}
+    .login-button {
     	width: 460px;
     	height: 48px;
+			margin-top: 15px;
     	font-size: 18px;
 			color: white;
     	background: red;
     	border: solid 1px red;
       border-radius: 10px;
     }
-		.login-button-wrap button a{
-			color: white;
-		}
 		.login-etc {
 			width: 460px;
 		}
@@ -99,17 +108,19 @@
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
-		<div class="main">
-      <section class="login-container">
-				<div class="textbox">로그인</div>
-				<div class="login-input-wrap">
-					<input placeholder="이메일 주소 예) sungkyul@naver.com" type="text"></input>
+		<div class="login-container">
+			<div class="textbox">로그인</div>
+			<form method="post" id="" action="">
+				<div class="login-box">
+					<label for="login-id"></label>
+					<input type="email" id="loginid" name="loginid" placeholder="이메일 주소 예) sungkyul@naver.com">
 				</div>
-				<div class="login-input-wrap password-wrap">
-					<input placeholder="비밀번호" type="password"></input>
+				<div class="password-box">
+					<label for="login-pw"></label>
+					<input type="password" id="loginpw" name="loginpw" placeholder="비밀번호">
 				</div>
-				<div class="login-button-wrap">
-					<button><a href="#">로그인</a></button>
+				<div class="login-botton">
+					<button type="submit" class="login-button">로그인</button>
 				</div>
 				<div class="login-etc">
 					<ul>
@@ -118,7 +129,7 @@
 						<li><a href="join.html">회원가입</a></li>
 					</ul>
 				</div>
-			</section>
+			</form>
 		</div>
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
