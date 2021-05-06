@@ -89,9 +89,9 @@
 .icon1{padding: 10px; text-align: center;}
 .icon1 img{padding: 10px;}
 
-/* 갤러리 컨테이너 */
-.gallery-container {
-	margin-top: 200px;
+/* 경매 컨테이너 */
+.auction-container {
+	margin-top: 100px;
  	padding: 50px;
 	display: flex;
 	flex-direction: row;
@@ -100,40 +100,22 @@
 	justify-content: space-evenly;
 	align-items: center;
 }
-.gallery-container a {
+.auction-container a {
 	margin-top: 20px;
 	flex-grow: 0;
 	flex-basis: 200px;
 	max-width: 200px;
 }
-.gallery-container img {
+.auction-container img {
 	height: 200px;
 	width: 200px;
 }
-.gallery-container> a:hover img{
+.auction-container .auction-pre > a:hover img{
 	filter: brightness(70%);
 }
-
-/* 사용자 추천 전시회 */
-.pickslide {width: 70%; margin-left: auto; margin-right: auto; margin-top: 200px; margin-bottom: 200px;}
-.pickslide > p {text-align: center; padding: 50px;}
-.pickslide input[id*="slide"] {display:none;}
-.pickslide .pickslidewrap {width: 100%;}
-.pickslide .picklist {white-space: nowrap; font-size: 0; overflow: hidden; position: relative;}
-.pickslide .picklist > li {display: inline-block; vertical-align: middle;  width:100%; transition:all 1.0s;}
-.pickslide .picklist > li > a {display:block; position: relative;}
-.pickslide .picklist > li > a img {width: 100%; height: 400px;}
-.pickslide .picklist label {position: absolute; z-index: 10; top: 50%; transform: translateY(-50%); padding:50px; cursor:pointer;}
-
-/* input에 체크되면 슬라이드 효과 */
-.pickslide input[id="slide1"]:checked ~ .pickslidewrap .picklist > li {transform:translateX(0%);}
-.pickslide input[id="slide2"]:checked ~ .pickslidewrap .picklist > li {transform:translateX(-100%);}
-.pickslide input[id="slide3"]:checked ~ .pickslidewrap .picklist > li {transform:translateX(-200%);}
-
-/* 좌,우 슬라이드 버튼 */
-.pickslide-control > div {display:none;}
-.pickslide .left {left: 30px; background: url('../images/left.png') center center / 40% no-repeat;}
-.pickslide .right {right: 30px; background: url('../images/right.png') center center / 40% no-repeat;}
-.pickslide input[id="slide1"]:checked ~ .pickslidewrap .pickslide-control > div:nth-child(1) {display:block;}
-.pickslide input[id="slide2"]:checked ~ .pickslidewrap .pickslide-control > div:nth-child(2) {display:block;}
-.pickslide input[id="slide3"]:checked ~ .pickslidewrap .pickslide-control > div:nth-child(3) {display:block;}
+.auction-container .auction-ing > a:hover img{
+	filter: brightness(70%);
+}
+.auction-container .auction-last > a:hover img{
+	filter: brightness(70%);
+}
