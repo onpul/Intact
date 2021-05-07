@@ -89,9 +89,9 @@
 .icon1{padding: 10px; text-align: center;}
 .icon1 img{padding: 10px;}
 
-/* 경매 컨테이너 */
-.auction-container {
-	margin-top: 100px;
+/* 갤러리 컨테이너 */
+.gallery-container {
+	margin-top: 200px;
  	padding: 50px;
 	display: flex;
 	flex-direction: row;
@@ -100,27 +100,31 @@
 	justify-content: space-evenly;
 	align-items: center;
 }
-.auction-container p {text-align: left; font-size: 13px; padding: 10px;}
-.auction-container a {
+.gallery-container a {
 	margin-top: 20px;
 	flex-grow: 0;
 	flex-basis: 200px;
 	max-width: 200px;
 }
-.auction-container img {
+.gallery-container img {
 	height: 200px;
 	width: 200px;
 }
-.auction-pre {margin-bottom: 70px;}
-.auction-ing {margin-bottom: 70px;}
-.auction-last {margin-bottom: 70px;}
+.gallery-container> a:hover img{
+	filter: brightness(70%);
+}
 
-.auction-container .auction-pre  > a:hover img{
-	filter: brightness(70%);
+/* 전시 정보 */
+.art-info-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	row-gap: 20px;
+	column-gap: 50px;
+	place-ime
 }
-.auction-container .auction-ing > a:hover img{
-	filter: brightness(70%);
-}
-.auction-container .auction-last > a:hover img{
-	filter: brightness(70%);
+.art-info {
+	background-color: #eee;
+	width: 400px;
+	height: 200px;
 }
