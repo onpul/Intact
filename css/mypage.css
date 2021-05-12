@@ -90,34 +90,119 @@
 
 /* 메인 컨테이너 */
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 1fr;
-  column-gap: 10px;
-}
-.area:nth-child(1) {
-	grid-column: 1 / span 2;
-	grid-row: 1 / span 6;
-}
-.area:nth-child(2) {
-	grid-column: 3 / span 3;
-  grid-row: 1 / span 6;
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 /* 내 프로필 */
 .myprofile{
   padding: 20px;
 }
-.profile-item > div{
+.profile-item {
   display: flex;
+	padding: 30px;
 }
 .profile-img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 70%;
   overflow: hidden;
+	margin-right: 20px;
 }
 #profile-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.myinfo > ul{
+	margin-bottom: 5px;
+}
+.myinfo ul li{
+	float: left;
+}
+.myinfo .name{
+  height: 35px;
+}
+.set{
+	width: 20px;
+	height: 20px;
+}
+.set img{
+	margin-left: 10px;
+	width: 20px;
+}
+.follow {
+	height: 25px;
+}
+.follow ul{
+	margin-right: 10px;
+}
+.follow ul li{
+	margin-right: 5px;
+}
+/* 자기소개 */
+.introduce {
+	width: 400px;
+	height: 300px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	margin-left: 30px;
+	padding: 10px;
+}
+
+/* 게시물 */
+/* 게시물 메뉴 */
+.postmenu {
+	margin-top: 40px;
+}
+.postmenu li{
+	display: inline;
+	margin-left: 20px;
+}
+.postmenu li:hover > ul{display: block;}
+.postmenu li a:hover{text-decoration: underline;}
+.postcount{
+	margin-top: 10px;
+	margin-left: 20px;
+	color: gray
+}
+.post-container {
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.post-container {
+	padding: 14px;
+	display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.auction-container p {text-align: left; font-size: 13px; padding: 20px; margin-left: 25px;}
+
+.auction-container a {
+	margin-top: 20px;
+	flex-grow: 0;
+	flex-basis: 200px;
+	max-width: 200px;
+}
+.auction-container img {
+	height: 200px;
+	width: 200px;
+}
+.item{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.post-img{
   width: 100%;
   height: 100%;
   object-fit: cover;
