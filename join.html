@@ -22,12 +22,29 @@
       flex-direction: column;
       align-items: center;
     }
+		.nickname-box{
+			width: 460px;
+			height: 48px;
+			border: solid 1px;
+			border-radius: 10px;
+			background: white;
+		}
+		.nickname-box input{
+			border: none;
+			width:440px;
+			margin-top: 8px;
+			font-size: 12px;
+			margin-left: 12px;
+			height:30px;
+			outline: none;
+		}
     .join-box{
       width: 460px;
       height: 48px;
       border: solid 1px;
       border-radius: 10px;
       background: white;
+			margin-top: 15px;
     }
     .join-box input{
     	border: none;
@@ -132,6 +149,10 @@
 		<div class="join-container">
 			<div class="textbox">회원가입</div>
 			<form method="post" id="" action="">
+				<div class="nickname-box">
+					<label for="join-nickname"></label>
+					<input type="text" id="joinnickname" name="joinnickname" placeholder="닉네임">
+				</div>
 				<div class="join-box">
 					<label for="join-id"></label>
 					<input type="text" id="joinid" name="joinid" placeholder="아이디">
