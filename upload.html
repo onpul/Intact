@@ -13,6 +13,7 @@
       display: grid;
       grid-template-columns: 100px auto 100px;
       grid-template-rows: auto;
+      row-gap: 30px;
     }
     /* 메뉴 탑 */
     .area:nth-child(1) {
@@ -35,7 +36,18 @@
       justify-self: center;
       text-align: center;
     }
-
+    .area:nth-child(4) {
+    	grid-column: 2 / 3;
+    	grid-row: 3 / 4;
+      justify-self: center;
+      text-align: center;
+    }
+    .area:nth-child(5) {
+    	grid-column: 2 / 3;
+    	grid-row: 4 / 5;
+      justify-self: center;
+      text-align: center;
+    }
     /* 상세 스타일 속성 */
     .menu-top {
       text-align: center;
@@ -148,10 +160,27 @@
       border: 0;
       background: #eee;
     }
+    #price {
+      width: 300px;
+      border: 0;
+      background: #eee;
+    }
     #content {
       width: 300px;
       border: 0;
       background: #eee;
+    }
+    #category-box {
+      width: 100%;
+      text-align: left;
+    }
+    #category-box {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .category > .category-box:hover #category-box {
+      opacity: 1;
+      visibility: visible;
     }
   </style>
 </head>
@@ -187,8 +216,23 @@
       <div class="container">
         <!-- 상단 메뉴 -->
         <div class="area menu-top">
-          <div class="category">카테고리 설정</div>
-          <div class="upload-summit">업로드 하기</div>
+          <div class="category">
+              <div class="category-box">
+                <p>카테고리 설정</p>
+                <!-- 폼1: 카테고리 설정 -->
+                <form name="category" method="get" action="">
+                  <ul id="category-box">
+                    <li>
+                      <label><input type="radio" name="category" value="category1" checked>그래픽</label>
+                    </li>
+                    <li>
+                      <label><input type="radio" name="category" value="category2">회화</label>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+          </div>
+          <div class="upload-summit"><p><input type="submit" value="업로드 하기" style="height:40px; width:100px; cursor:pointer; background-color:transparent; border:0px transparent solid;"></p></div>
         </div>
         <!-- 사이드 메뉴 -->
         <div class="area menu-side">
@@ -201,24 +245,106 @@
           </ul>
         </div>
         <!-- 메인 -->
+        <!-- 업로드 컨테이너1 -->
         <div class="area upload-container">
           <div class="box">
             <div class="img-area">
-              <label class="input-file-button" for="image">파일 선택</label>
-               <div id="image_container"></div>
-               <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" style=display:"none"/>
+              <!-- 폼2: 전시회 사진(이미지) -->
+              <form name="image" action="" method="post">
+                <label class="input-file-button" for="image">파일 선택</label>
+                 <div id="image_container"></div>
+                 <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" style=display:"none"/>
+              </form>
             </div>
             <div class="text-area">
               <div class="content-form">
-                <form enctype="multipart/form-data" action="" method="post">
+                <!-- 폼3: 전시회 내용(텍스트) -->
+                <form name="content" enctype="multipart/form-data" action="" method="post">
                   <ul>
-                    <!-- 전시회 제목 -->
-                    <input id="name" type="text" name="userId" placeholder="전시회 제목">
+                    <li>
+                      <!-- 전시회 제목 -->
+                      <input id="name" type="text" name="name" placeholder="전시회 제목">
+                    </li>
                   </ul>
                   <ul>
                     <!-- 전시회 소개 및 목차 -->
                     <li><textarea id="content" cols="40" rows="15" name="content" placeholder="전시회 소개 및 목차" style="resize:none;"></textarea></li>
                   </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 업로드 컨테이너2 -->
+        <div class="area upload-container">
+          <div class="box">
+            <div class="img-area">
+              <!-- 폼4: 작품 사진(이미지)  -->
+              <form name="image" action="" method="post">
+                <label class="input-file-button" for="image">파일 선택</label>
+                 <div id="image_container"></div>
+                 <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" style=display:"none"/>
+              </form>
+            </div>
+            <div class="text-area">
+              <div class="content-form">
+                <!-- 폼5: 작품 내용(텍스트) -->
+                <form name="content" enctype="multipart/form-data" action="" method="post">
+                  <ul>
+                    <li>
+                      <!-- 작품 제목 -->
+                      <input id="name" type="text" name="name" placeholder="작품 제목">
+                    </li>
+                  </ul>
+                  <ul>
+                    <!-- 작품 소개 -->
+                    <li><textarea id="content" cols="40" rows="14" name="content" placeholder="작품 소개" style="resize:none;"></textarea></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <!-- 작품 가격 -->
+                      <input id="price" type="text" name="name" placeholder="작품 가격 설정">
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 업로드 컨테이너3 -->
+        <div class="area upload-container">
+          <div class="box">
+            <div class="img-area">
+              <!-- 폼6: 작품 사진(이미지)  -->
+              <form name="image" action="" method="post">
+                <label class="input-file-button" for="image">파일 선택</label>
+                 <div id="image_container"></div>
+                 <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" style=display:"none"/>
+              </form>
+            </div>
+            <div class="text-area">
+              <div class="content-form">
+                <!-- 폼7: 작품 내용(텍스트) -->
+                <form name="content" enctype="multipart/form-data" action="" method="post">
+                  <ul>
+                    <li>
+                      <!-- 작품 제목 -->
+                      <input id="name" type="text" name="name" placeholder="작품 제목">
+                    </li>
+                  </ul>
+                  <ul>
+                    <!-- 작품 소개 -->
+                    <li><textarea id="content" cols="40" rows="14" name="content" placeholder="작품 소개" style="resize:none;"></textarea></li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <!-- 작품 가격 -->
+                      <input id="price" type="text" name="name" placeholder="작품 가격 설정">
+                    </li>
+                  </ul>
+                </form>
               </div>
             </div>
           </div>
@@ -234,7 +360,9 @@
 		</div>
 		<!-- 푸터 끝-->
 	</div>
-  <script> function setThumbnail(event) {
+  <script>
+    // 업로드 창 이미지 미리보기
+    function setThumbnail(event) {
     var reader = new FileReader();
 
     reader.onload = function(event) {
@@ -244,6 +372,17 @@
 
     reader.readAsDataURL(event.target.files[0]);
   }
+
+  $(document).on("click",".guideBox > p",function(){
+      if($(this).next().css("display")=="none"){
+        $(this).next().show();
+        $(this).children("span").text("[닫기]");
+      }else{
+        $(this).next().hide();
+        $(this).children("span").text("[열기]");
+      }
+  });
+
  </script>
 </body>
 </html>
