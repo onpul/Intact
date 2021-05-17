@@ -72,3 +72,32 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+/* 마우스 오버 효과 */
+.art-img{
+  display: inline-block;
+  position: relative;
+	overflow: hidden;
+}
+.art-img:hover:after,
+.art-img:hover > .hover_text
+{
+  display:block;
+}
+.auction-pre .auction-pre-img > li:hover img{
+	filter: brightness(70%);
+}
+.auction-ing .auction-ing-img > li:hover img{
+	filter: brightness(70%);
+}
+.auction-last .auction-last-img > li:hover img{
+	filter: brightness(70%);
+}
+.hover_text {
+  position: absolute;
+  color: red;
+  z-index: 20;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
