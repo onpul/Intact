@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Intact</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<style>
+	.header{
+		background: #EAEAEA;
+		height: 100px;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.nav{
+		display: flex;
+	}
+	/* 로고 */
+	.logo{
+		cursor: pointer;
+		padding: 10px;
+	}
+	.logo img{width: 100px;}
+	/* 네비게이션 */
+	.nav{
+		height: 100px;
+		align-items: center;
+	}
+	.nav ul{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	.nav li a{
+		white-space: nowrap;
+		display: inline-block;
+		padding: 10px;
+		color: #222;
+		font-size: 12px;
+	}
+	.nav li:hover > ul{display: block;}
+	.nav li a:hover{text-decoration: underline;}
+	.btn-img{
+		margin-top: 4px;
+		width: 15px;
+		height: 15px;
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+	}
+	/* 검색창 */
+	.search-form{display: flex; float: left; min-width: 30%; padding: 30px 30px 30px;}
+	.search-form input{padding: 12px; width: 40%; height: 40px; border: 0; border-radius: 60px;}
+	.search-form input:focus{outline:none;}
+	.search-form input[type="search"] {flex: 1; min-width: 0;}
+	</style>
+</head>
+<body>
+	<!-- 헤더 시작 -->
+	<header class="header">
+		<!-- 로고 -->
+	  <div class="logo">
+			<a href="./index.html">
+			<img src="./images/mainLogo.png" alt="Intact">
+			</a>
+	  </div>
+	  <!-- 네비게이션1 -->
+		<nav class="nav">
+	 		<li><a href="auction.html" class="menu-link">경매</a></li>
+	  	<li><a href="exhibit.html" class="menu-link">전시회</a></li>
+	  	<li><a href="buy.html" class="menu-link">판매</a></li>
+	  </nav>
+	  <!-- 검색창 -->
+	  <form class="search-form" action="">
+	  <input type="search">
+	  </form>
+	  <!-- 네비게이션2 -->
+	  <nav class="nav">
+      <li><a href="mypage.html" class="menu-link"><img class="btn-img" src="./images/bell2.png"></a></li>
+	  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
+	  </nav>
+	</header>
+	<!-- 헤더 끝 -->
+</body>
+</html>
