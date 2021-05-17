@@ -5,9 +5,71 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Intact</title>
-	<link rel="stylesheet" href="css/mypage.css">
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/default.css">
+	<style>
+		/* 상단 메뉴 네비 스타일 */
+		.menu {
+			display: flex;
+		  background: #EAEAEA;
+		  height: 50px;
+		  align-items: center;
+		}
+		.menu-item {
+			width: 15%;
+		}
+		.menu-link {
+			display: block;
+			text-decoration: none;
+			text-align: center;
+		}
+		.menu li:hover > ul{display: block;}
+		.menu li a:hover{text-decoration: underline;}
+
+		/* 메인 스크랩 스타일 */
+		.scraping {
+			padding: 30px;
+			display: grid;
+			row-gap: 30px;
+			column-gap: 20px;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(6, 1fr);
+			place-items: center center;
+			align-content: center;
+			justify-content: center;
+		}
+		.item {
+		  width: 200px;
+		  height: 200px;
+		  overflow: hidden;
+			position: relative;
+			cursor: pointer;
+			background-color: #eee;
+		}
+		#scrap-img{
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+			display:inline-block;
+			position: absolute;
+			bottom: 0;
+			overflow: hidden;
+		}
+		.art-info {
+			text-align: left;
+			background-color: #ffffff;
+			width: 100%;
+			height: 60px;
+			color: black;
+			position: absolute;
+			opacity: 0;
+			bottom: 0;
+			z-index: 5;
+		}
+		.item:hover .art-info {
+			opacity: 0.8;
+		}
+	</style>
 </head>
 <body>
 	<div class="main-container">
@@ -49,7 +111,43 @@
   		</ul>
       <!-- 메인 컨테이너 -->
       <div class="container">
-
+				<div class="scraping">
+					<div class="item"><a href="#"><img id="scrap-img" src="" alt="작품">
+						<ul class="art-info">
+							<li>전시회 제목</li>
+							<li>작가명</li>
+						</ul>
+					</a></div>
+					<div class="item">2</div>
+					<div class="item">3</div>
+					<div class="item">4</div>
+					<div class="item">5</div>
+					<div class="item">6</div>
+					<div class="item">7</div>
+					<div class="item">8</div>
+					<div class="item">9</div>
+					<div class="item">10</div>
+					<div class="item">11</div>
+					<div class="item">12</div>
+					<div class="item">13</div>
+					<div class="item">14</div>
+					<div class="item">15</div>
+					<div class="item">16</div>
+					<div class="item">17</div>
+					<div class="item">18</div>
+					<div class="item">19</div>
+					<div class="item">20</div>
+					<div class="item">21</div>
+					<div class="item">22</div>
+					<div class="item">23</div>
+					<div class="item">24</div>
+					<div class="item">25</div>
+					<div class="item">26</div>
+					<div class="item">27</div>
+					<div class="item">28</div>
+					<div class="item">29</div>
+					<div class="item">30</div>
+				</div>
 		  </div>
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
