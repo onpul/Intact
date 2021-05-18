@@ -7,6 +7,7 @@
 	<title>Intact</title>
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
   <style>
     .container{
       padding: 30px;
@@ -191,14 +192,25 @@
 			<!-- 로고 -->
 		  <div class="logo">
 				<a href="./index.html">
-				<img src="./images/mainLogo.png" alt="Intact">
+				<img src="" alt="Intact">
 				</a>
 		  </div>
 		  <!-- 네비게이션1 -->
 			<nav class="nav">
-		 		<li><a href="auction.html" class="menu-link">경매</a></li>
-		  	<li><a href="exhibit.html" class="menu-link">전시회</a></li>
-		  	<li><a href="buy.html" class="menu-link">판매</a></li>
+				<ul class="mainmenu">
+					<li><a href="auction.html" class="menu-link">경매
+						<ul class="submenu">
+							<li><a href="#">디지털</a></li>
+							<li><a href="#">회화</a></li>
+						</ul>
+					</a></li>
+					<li><a href="exhibit.html" class="menu-link">전시회
+						<ul class="submenu">
+							<li><a href="#">디지털</a></li>
+							<li><a href="#">회화</a></li>
+						</ul>
+					</a></li>
+				</ul>
 		  </nav>
 		  <!-- 검색창 -->
 		  <form class="search-form" action="search.php">
@@ -206,8 +218,7 @@
 		  </form>
 		  <!-- 네비게이션2 -->
 		  <nav class="nav">
-		  	<li><a href="login.html" class="menu-link">로그인</a></li>
-			  <li><a href="join.html" class="menu-link">회원가입</a></li>
+		  	<li><a href="mypage-exhibit.html" class="menu-link">마이페이지</a></li>
 		  </nav>
 		</header>
 		<!-- 헤더 끝 -->
