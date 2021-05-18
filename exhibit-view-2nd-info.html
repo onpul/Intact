@@ -1,3 +1,4 @@
+<!-- 전시회 진행 페이지 2 상세 정보 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,11 +81,11 @@
     .sidebar .author ul {
       display: inline-block;
     }
-    .sidebar a {
+    /* .sidebar a {
       padding-right: 20px;
       display: block;
       text-decoration: none;
-    }
+    } */
     .author {
       padding-top: 10px;
       padding-left: 10px;
@@ -171,7 +172,7 @@
           </ul>
           <ul class="cost">
             <li>가격: 10,000원</li>
-            <li><a href="phrchase.html">구매하기</a></li>
+            <li><a href="purchase.html">구매하기</a></li>
           </ul>
         </p>
       </div>
@@ -190,8 +191,10 @@
         </a>
       </div>
       <div class="area2 save">
-        <ul><li><a href="#">하트</a></li></ul>
-        <ul><li><a href="">스크랩</a></li></ul>
+        <form class="" action="" method="post">
+          <li><input id="heart" type='button' name="heart" value='하트'/></li>
+          <li><input id="scrap" type='button' name="scrap" value='스크랩'/></li>
+        </form>
       </div>
       <div class="area2 move" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">
       </div>
