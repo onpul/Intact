@@ -27,7 +27,7 @@
 		.nickname-box{
 			width: 460px;
 			height: 48px;
-			border: solid 1px;
+			border: solid 1px #707070;
 			border-radius: 10px;
 			background: white;
 		}
@@ -43,7 +43,7 @@
     .join-box{
       width: 460px;
       height: 48px;
-      border: solid 1px;
+      border: solid 1px #707070;
       border-radius: 10px;
       background: white;
 			margin-top: 15px;
@@ -60,7 +60,7 @@
 		.password-box{
 			width: 460px;
 			height: 48px;
-			border: solid 1px;
+			border: solid 1px #707070;
 			border-radius: 10px;
 			background: white;
 			margin-top: 15px;
@@ -77,7 +77,7 @@
 		.email-box{
 			width: 460px;
 			height: 48px;
-			border: solid 1px;
+			border: solid 1px #707070;
 			border-radius: 10px;
 			background: white;
 			margin-top: 15px;
@@ -101,9 +101,10 @@
 			margin-top: 15px;
     	font-size: 18px;
 			color: white;
-    	background: red;
-    	border: solid 1px red;
+    	background: #FF7F00;
+    	border: solid 1px #FF7F00;
       border-radius: 10px;
+			cursor: pointer;
     }
 		.join-etc {
 			width: 460px;
@@ -127,7 +128,7 @@
 			<!-- 로고 -->
 		  <div class="logo">
 				<a href="./index.html">
-				<img src="" alt="Intact">
+				<img src="./images/main_logo.png" alt="Intact">
 				</a>
 		  </div>
 		  <!-- 네비게이션1 -->
@@ -159,45 +160,47 @@
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
-		<div class="join-container">
-			<div class="textbox">회원가입</div>
-			<form method="post" id="" action="">
-				<div class="nickname-box">
-					<label for="join-nickname"></label>
-					<input type="text" id="joinnickname" name="joinnickname" placeholder="닉네임">
-				</div>
-				<div class="join-box">
-					<label for="join-id"></label>
-					<input type="text" id="joinid" name="joinid" placeholder="아이디">
-				</div>
-				<div class="password-box">
-					<label for="join-pw"></label>
-					<input type="password" id="joinpw" name="joinpw" placeholder="비밀번호">
-				</div>
-				<div class="email-box">
-					<label for="join-email"></label>
-					<input type="email" id="join-email" name="join-email" placeholder="이메일 주소 예) sungkyul@naver.com">
-				</div>
-				<div class="join-agree">
-				<label for="joinagree">
-					<input type="checkbox" id="joinagree" class="inp_radio"  name="joinagree"> 개인정보 사용 동의
-				</label>
-				</div>
-				<div class="join-botton">
-					<button type="submit" class="join-button">회원가입</button>
-				</div>
-				<div class="join-etc">
-					<ul>
-						<li><a href="login.html">이미 회원가입을 했다면? 로그인</a></li>
-					</ul>
-				</div>
-			</form>
+		<div class="main">
+			<div class="join-container">
+				<div class="textbox">회원가입</div>
+				<form method="post" id="" action="">
+					<div class="nickname-box">
+						<label for="join-nickname"></label>
+						<input type="text" id="joinnickname" name="joinnickname" placeholder="닉네임">
+					</div>
+					<div class="join-box">
+						<label for="join-id"></label>
+						<input type="text" id="joinid" name="joinid" placeholder="아이디">
+					</div>
+					<div class="password-box">
+						<label for="join-pw"></label>
+						<input type="password" id="joinpw" name="joinpw" placeholder="비밀번호">
+					</div>
+					<div class="email-box">
+						<label for="join-email"></label>
+						<input type="email" id="join-email" name="join-email" placeholder="이메일 주소 예) sungkyul@naver.com">
+					</div>
+					<div class="join-agree">
+					<label for="joinagree">
+						<input type="checkbox" id="joinagree" class="inp_radio"  name="joinagree"> 개인정보 사용 동의
+					</label>
+					</div>
+					<div class="join-botton">
+						<button type="submit" class="join-button">회원가입</button>
+					</div>
+					<div class="join-etc">
+						<ul>
+							<li><a href="login.html">이미 회원가입을 했다면? 로그인</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
 		</div>
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
 		<div class="footer">
-			<address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
-			</address>
+			<!-- <address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
+			</address> -->
 			<p>Copyright(c)2021 Intact㈜ Intact Co., Ltd. All Rights Reserved</p>
 		</div>
 		<!-- 푸터 끝-->

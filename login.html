@@ -27,7 +27,7 @@
     .login-box{
       width: 460px;
       height: 48px;
-      border: solid 1px;
+      border: solid 1px #707070;
       border-radius: 10px;
       background: white;
     }
@@ -43,7 +43,7 @@
 		.password-box{
 			width: 460px;
 			height: 48px;
-			border: solid 1px;
+			border: solid 1px #707070;
 			border-radius: 10px;
 			background: white;
 			margin-top: 15px;
@@ -63,9 +63,10 @@
 			margin-top: 15px;
     	font-size: 18px;
 			color: white;
-    	background: red;
-    	border: solid 1px red;
+    	background: #FF7F00;
+    	border: solid 1px #FF7F00;
       border-radius: 10px;
+			cursor: pointer;
     }
 		.login-etc {
 			width: 460px;
@@ -89,7 +90,7 @@
 			<!-- 로고 -->
 		  <div class="logo">
 				<a href="./index.html">
-				<img src="" alt="Intact">
+				<img src="./images/main_logo.png" alt="Intact">
 				</a>
 		  </div>
 		  <!-- 네비게이션1 -->
@@ -121,32 +122,34 @@
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
-		<div class="login-container">
-			<div class="textbox">로그인</div>
-			<form method="post" id="" action="">
-				<div class="login-box">
-					<label for="login-id"></label>
-					<input type="email" id="loginid" name="loginid" placeholder="이메일 주소 예) sungkyul@naver.com">
-				</div>
-				<div class="password-box">
-					<label for="login-pw"></label>
-					<input type="password" id="loginpw" name="loginpw" placeholder="비밀번호">
-				</div>
-				<div class="login-botton">
-					<button type="submit" class="login-button">로그인</button>
-				</div>
-				<div class="login-etc">
-					<ul>
-						<li><a href="join.html">회원가입</a></li>
-					</ul>
-				</div>
-			</form>
-		</div>
+		<main class="main">
+			<div class="login-container">
+				<div class="textbox">로그인</div>
+				<form method="post" id="" action="">
+					<div class="login-box">
+						<label for="login-id"></label>
+						<input type="email" id="loginid" name="loginid" placeholder="이메일 주소 예) sungkyul@naver.com">
+					</div>
+					<div class="password-box">
+						<label for="login-pw"></label>
+						<input type="password" id="loginpw" name="loginpw" placeholder="비밀번호">
+					</div>
+					<div class="login-botton">
+						<button type="submit" class="login-button">로그인</button>
+					</div>
+					<div class="login-etc">
+						<ul>
+							<li><a href="join.html">회원가입</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</main>
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
 		<div class="footer">
-			<address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
-			</address>
+			<!-- <address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
+			</address> -->
 			<p>Copyright(c)2021 Intact㈜ Intact Co., Ltd. All Rights Reserved</p>
 		</div>
 		<!-- 푸터 끝-->
