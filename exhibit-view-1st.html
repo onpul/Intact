@@ -16,7 +16,7 @@
     }
     body {
       height: 100vh;
-      background-image: url("./images/background.png");
+      background-image: url("./images/space-right.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
@@ -41,6 +41,10 @@
       margin-top: 20px;
       margin-left: 20px;
     }
+    .logo img {
+      width: 17px;
+      box-shadow: 0px 3px 6px lightgray;
+    }
 		.sidebar {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(8, 1fr);
@@ -55,6 +59,40 @@
       overflow-x: hidden;
       padding-top: 30px;
       text-align: right;
+    }
+    .sidebar ul {
+      display: inline-block;
+    }
+    .save > div {
+      width: 24px;
+      height: 24px;
+    }
+    .author {
+      padding: 3px;
+      margin: 20px;
+      width: 150px;
+      height: 50px;
+      background-color: white;
+      border-radius: 26px;
+      box-shadow: 0px 3px 6px lightgray;
+      position: relative;
+    }
+    .author > a > ul {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .author > a > .profile{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 85%;
+      width: 35px;
+      height: 35px;
+      border-radius: 70%;
+      overflow: hidden;
     }
     .area2:nth-child(1) {
 			grid-row: 1 / 2;
@@ -73,13 +111,6 @@
       display: block;
       text-decoration: none;
     }
-    .author {
-      padding-top: 10px;
-      padding-left: 10px;
-      margin-bottom: 10px;
-      height: 50px;
-      background-color: white;
-    }
     .profile{
       width: 35px;
       height: 35px;
@@ -90,6 +121,24 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    #heart {
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      background: url("./images/like_1@2x.png") no-repeat;
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+    #scrap {
+      margin-right: 20px;
+      background: url("./images/scrap_1@2x.png") no-repeat;
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
     }
     .move{
       width: 30%;
@@ -134,7 +183,7 @@
     <!-- 로고 -->
     <div class="item logo">
 			<a href="./index.html">
-      <img src="" alt="Intact">
+      <img src="./images/small_logo.png" alt="Intact">
       </a>
     </div>
     <!-- 메인 -->
@@ -143,6 +192,10 @@
         <img class="art-img" src="https://cdn.mos.cms.futurecdn.net/JbLiedaA6c6oGJrL4kUAYP.jpg" alt="작품 이미지">
       </div>
       <div class="area art-info" OnClick="location.href='exhibit-view-1st-info.html'" style="cursor:pointer;">
+        <ul>
+          <li>작품 제목</li>
+          <li>작품 소개란</li>
+        </ul>
       </div>
     </div>
     <!-- 사이드바 -->
@@ -160,8 +213,8 @@
       </div>
       <div class="area2 save">
         <form class="" action="" method="post">
-          <li><input id="heart" type='button' name="heart" value='하트'/></li>
-          <li><input id="scrap" type='button' name="scrap" value='스크랩'/></li>
+          <li><input id="heart" type='button' name="heart"></li>
+          <li><input id="scrap" type='button' name="scrap"></li>
         </form>
       </div>
       <div class="area2 move" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">

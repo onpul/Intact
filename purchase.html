@@ -13,9 +13,10 @@
     /* 마이페이지 상단 메뉴 스타일 속성 */
     .menu {
     	display: flex;
-      background: #EAEAEA;
+      background: #ffffff;
       height: 50px;
       align-items: center;
+			box-shadow: 0px 1px 10px gray;
     }
     .menu-item {
     	width: 15%;
@@ -85,13 +86,29 @@
       display: flex;
     }
     .updown { border: 0.1px solid #eee; width: 0px; height: 100px; }
-		.purchase {
+		/* .purchase {
 			line-height: 40px;
 			text-align: center;
 			width: 100px;
 			height: 100%;
-			background-color: yellow;
+			background-color: #FFD62C;
 			border-radius: 10%;
+		} */
+		/* .purchase button {
+			border: 1px solid #FFD62C;
+			background-color: #FFD62C;
+			border-radius: 10%;
+			padding: 5px;
+		} */
+		#purchase-btn {
+			width: 200px;
+			height: 60px;
+			border-radius: 10px;
+			border: 1px solid #FFD62C;
+			background-color: #FFD62C;
+			color: black;
+			padding: 5px;
+			cursor: pointer;
 		}
   </style>
 </head>
@@ -281,7 +298,7 @@
           <div class="discount">
             <ul>
               <li>예상 할인 금액</li>
-              <li>2,000</li>
+              <li><span style="color:#FF2600">2,000</span></li>
             </ul>
           </div>
         </div>
@@ -292,13 +309,13 @@
           <div class="order-total">
             <ul>
               <li>총 주문 금액</li>
-              <li>28,000</li>
+              <li><span style="color:#FF2600">28,000</span></li>
             </ul>
           </div>
         </div>
 				<div class="item">
 					<div class="purchase">
-						<button onclick="javascript:btn()"> 구매하기 </button>
+						<button id="purchase-btn" onclick="javascript:btn()"> 구매하기 </button>
 						<!-- <p>구매하기</p> -->
 				</div>
       </div>
@@ -306,8 +323,8 @@
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
 		<div class="footer">
-			<address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
-			</address>
+			<!-- <address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
+			</address> -->
 			<p>Copyright(c)2021 Intact㈜ Intact Co., Ltd. All Rights Reserved</p>
 		</div>
 		<!-- 푸터 끝-->

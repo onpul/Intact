@@ -14,8 +14,19 @@
       padding-top: 10px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+
       /* align-items: center; */
     }
+		.mouse img{width: 18px; padding-top: 10px; margin-top: 20px;}
+		.mouse{animation: scroll 0.3s infinite linear alternate;}
+		@keyframes scroll {
+			from{
+		    transform: translatey(0px);
+		  }
+		  to{
+		    transform: translatey(10px);
+		  }
+		}
     .item:nth-child(1) {
     	grid-column: 2 / 3;
       justify-self: center;
@@ -80,13 +91,13 @@
 				<div class="slidewrap">
 					<ul class="slidelist">
 						<li class="slideitem">
-							<a href="auction.html"><img src="./images/ex1.jpg"></a>
+							<a href="auction-login.html"><img src="./images/ex1.jpg"></a>
 						</li>
 						<li class="slideitem">
-							<a href="auction.html"><img src="./images/ex2.jpg"></a>
+							<a href="auction-login.html"><img src="./images/ex2.jpg"></a>
 						</li>
 						<li class="slideitem">
-							<a href="auction.html"><img src="./images/ex3.jpg"></a>
+							<a href="auction-login.html"><img src="./images/ex3.jpg"></a>
 						</li class="slideitem">
 						<!-- 좌, 우 슬라이드 버튼 -->
 						<div class="slide-control">
@@ -110,8 +121,8 @@
 			<div class="icon">
         <div class="item mouse">
           <a href="#">
-          <img src="./images/mouse.png" alt="더 많은 추천작을 보려면">
-          <p>더 많은 추천작을 보려면</p>
+          <img src="./images/scroll.png" alt="스크롤">
+          <p>스크롤</p>
           </a>
         </div>
         <div class="item plus">
@@ -171,8 +182,8 @@
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
 		<div class="footer">
-			<address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
-			</address>
+			<!-- <address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
+			</address> -->
 			<p>Copyright(c)2021 Intact㈜ Intact Co., Ltd. All Rights Reserved</p>
 		</div>
 		<!-- 푸터 끝-->

@@ -16,7 +16,7 @@
     body {
     	height: 100%;
       margin: 0;
-      background: #eee;
+      background: #ffffff;
       margin: 0;
 			overflow: hidden;
     }
@@ -40,6 +40,25 @@
       margin-top: 20px;
       margin-left: 20px;
     }
+    .logo img {
+      width: 17px;
+      box-shadow: 0px 3px 6px lightgray;
+    }
+    .door {
+      line-height: 80px;
+    }
+    .door img {
+      width: 320px;
+    }
+    .door p {
+      font-size: 40px;
+      background-color: #ffffff;
+      width: 200px;
+      height: 80px;
+      color: black;
+      border-radius: 32px;
+      box-shadow: 0px 3px 6px lightgray;
+    }
 		.sidebar {
       height: 100%;
       position: fixed;
@@ -53,14 +72,43 @@
     .sidebar ul {
       display: inline-block;
     }
+    /* .save {
+      position: relative;
+      width: 150px; */
+    }
+    .save > div {
+      width: 24px;
+      height: 24px;
+    }
     .author {
-      padding-top: 10px;
-      padding-left: 10px;
-      margin-bottom: 10px;
+      padding: 3px;
+      margin: 20px;
+      width: 150px;
       height: 50px;
       background-color: white;
+      border-radius: 26px;
+      box-shadow: 0px 3px 6px lightgray;
+      position: relative;
     }
-    .profile{
+    /* .author > a {
+      position: absolute;
+      display: block;
+      right: -30%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    } */
+    .author > a > ul {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .author > a > .profile{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 85%;
       width: 35px;
       height: 35px;
       border-radius: 70%;
@@ -70,6 +118,24 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    #heart {
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      background: url("./images/like_1@2x.png") no-repeat;
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+    #scrap {
+      margin-right: 20px;
+      background: url("./images/scrap_1@2x.png") no-repeat;
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
     }
 		.main {
 			text-align: center;
@@ -99,7 +165,7 @@
   <div class="container">
     <div class="item logo">
 			<a href="./index.html">
-      <img src="" alt="Intact">
+      <img src="./images/small_logo.png" alt="Intact">
       </a>
     </div>
     <div class="item main">
@@ -115,7 +181,7 @@
     </div>
 		<div class="item sidebar">
 			<div class="author">
-        <a href="#">
+        <a href="">
           <ul>
             <li>작가명</li>
             <li>작가 소개글</li>
@@ -127,8 +193,8 @@
       </div>
       <ul class="save">
       <form class="" action="" method="post">
-        <li><input id="heart" type='button' name="heart" value='하트'/></li>
-        <li><input id="scrap" type='button' name="scrap" value='스크랩'/></li>
+        <li><input id="heart" type='button' name="heart"/></li>
+        <li><input id="scrap" type='button' name="scrap"/></li>
       </form>
       </ul>
     </div>

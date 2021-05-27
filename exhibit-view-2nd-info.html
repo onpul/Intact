@@ -16,7 +16,7 @@
     }
     body {
       height: 100vh;
-      background-image: url("./images/background2.png");
+      background-image: url("./images/space-side.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
@@ -43,6 +43,14 @@
       align-items: start;
       justify-items: start;
       display: grid;
+    }
+    .logo {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .logo img {
+      width: 17px;
+      box-shadow: 0px 3px 6px lightgray;
     }
     .move2 {
       width: 30%;
@@ -86,14 +94,32 @@
       display: block;
       text-decoration: none;
     } */
+    .save > div {
+      width: 24px;
+      height: 24px;
+    }
     .author {
-      padding-top: 10px;
-      padding-left: 10px;
-      margin-bottom: 10px;
+      padding: 3px;
+      margin: 20px;
+      width: 150px;
       height: 50px;
       background-color: white;
+      border-radius: 26px;
+      box-shadow: 0px 3px 6px lightgray;
+      position: relative;
     }
-    .profile{
+    .author > a > ul {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .author > a > .profile{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 85%;
       width: 35px;
       height: 35px;
       border-radius: 70%;
@@ -103,6 +129,24 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    #heart {
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      background: url("./images/like_1@2x.png") no-repeat;
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+    #scrap {
+      margin-right: 20px;
+      background: url("./images/scrap_1@2x.png") no-repeat;
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
     }
     .move{
       width: 30%;
@@ -153,7 +197,7 @@
     <div class="item logo">
       <div class="area3">
   			<a href="./index.html">
-        <img src="" alt="Intact">
+        <img src="./images/small_logo.png" alt="Intact">
         </a>
       </div>
       <div class="area3 move2" OnClick="location.href='exhibit-view-1st-info.html'" style="cursor:pointer;">
@@ -192,8 +236,8 @@
       </div>
       <div class="area2 save">
         <form class="" action="" method="post">
-          <li><input id="heart" type='button' name="heart" value='하트'/></li>
-          <li><input id="scrap" type='button' name="scrap" value='스크랩'/></li>
+          <li><input id="heart" type='button' name="heart"></li>
+          <li><input id="scrap" type='button' name="scrap"></li>
         </form>
       </div>
       <div class="area2 move" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">
