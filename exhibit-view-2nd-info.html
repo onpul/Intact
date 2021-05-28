@@ -27,6 +27,7 @@
     	display: grid;
 			grid-template-columns: repeat(18, 1fr);
     }
+
     /* 왼쪽 사이드바 구역 */
     .area:nth-child(1) {
       grid-column: 1 / 4;
@@ -40,12 +41,31 @@
       grid-column: 1 / 1;
       grid-row: 1 / 1;
     }
+    .area1:nth-child(2) {
+      grid-column: 1 / 1;
+      grid-row: 5 / 10;
+    }
+    .area1:nth-child(3) {
+      grid-column: 1 / 3;
+      grid-row: 5 / 10;
+      justify-self: end;
+    }
     #logo {
       margin-top: 13px;
       margin-left: 20px;
       width: 17px;
       box-shadow: 0px 3px 6px lightgray;
     }
+    #prev{
+      /* margin-left: 25px; */
+    }
+    .prev {
+      opacity: 0;
+    }
+    .prev:hover {
+      opacity: 1;
+    }
+
     /* 메인 구역 */
     .area:nth-child(2) {
 			grid-column: 4 / 16;
@@ -145,6 +165,20 @@
       margin-top: 10px;
       margin-right: 10px;
 		}
+    .area3:nth-child(3) {
+      grid-column: 1 / 3;
+      grid-row: 5 / 10;
+      justify-self: start;
+    }
+    #next{
+      margin-left: 0;
+    }
+    .next {
+      opacity: 0;
+    }
+    .next:hover {
+      opacity: 1;
+    }
     .author {
       padding: 3px;
       margin: 20px;
@@ -207,6 +241,11 @@
         <img id="logo" src="./images/small_logo.png" alt="Intact">
         </a>
       </div>
+      <div class="area1 move2" OnClick="location.href='exhibit-view-1st-info.html'" style="cursor:pointer;">
+      </div>
+      <div class="area1 prev" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">
+        <img id="prev" src="./images/previous@2x.png" alt="">
+      </div>
     </div>
     <!-- 메인 -->
     <div class="main area">
@@ -252,6 +291,9 @@
           <li><input id="heart" type='button' name="heart"></li>
           <li><input id="scrap" type='button' name="scrap"></li>
         </form>
+      </div>
+      <div class="next area3" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">
+        <img id="next" src="./images/next@2x.png" alt="">
       </div>
     </div>
   </div>

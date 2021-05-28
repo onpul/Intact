@@ -1,17 +1,21 @@
 /* 레이아웃 구조 */
 html {
 	height: 100%;
+	width: 100%;
 }
 body{
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	width: 100%;
 }
 .main-container{
 	width: 100%;
 	min-height: 100%;
-	background: #fff;
-	position: relative;
+	/* background: #fff; */
+	/* position: fixed;
+	overflow: hidden; */
+	/* position: relative; */
 }
 .header{
 	background: #ffffff;
