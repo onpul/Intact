@@ -1,0 +1,114 @@
+<!-- 헤더 별도 분리 페이지 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Intact</title>
+	<link rel="stylesheet" href="css/default.css">
+  <style>
+    .header{
+      background: #EAEAEA;
+      height: 100px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .nav{
+      display: flex;
+    }
+    /* 로고 */
+    .logo {
+      cursor: pointer;
+      padding: 10px;
+    }
+    .logo img {
+    	width: 100px;
+		}
+    /* 네비게이션 */
+    .nav {
+    	height: 100px;
+    	align-items: center;
+    }
+    .nav ul {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    .nav li a {
+      white-space: nowrap;
+      display: inline-block;
+      padding: 10px;
+      color: #222;
+      font-size: 12px;
+    }
+    .nav li:hover > ul{display: block;}
+    .nav li a:hover{text-decoration: underline;}
+		/* 서브메뉴 */
+		ul.mainmenu > li {
+			display: inline-block;
+			text-align: center;
+			position: relative;
+		}
+		ul.submenu {
+			background: #ffffff;
+			width: 70px;
+			z-index: 500;
+		}
+		ul.mainmenu > li:hover ul.submenu {display: block;}
+		ul.mainmenu > li ul.submenu {
+			display: none;
+			text-align: left;
+			position: absolute;
+			left: 0;
+		}
+		ul.mainmenu > li ul.submenu > li {
+			display: inline-block;
+		}
+    /* 검색창 */
+    .search-form{display: flex; float: left; min-width: 30%; padding: 30px 30px 30px;}
+    .search-form input{padding: 12px; width: 40%; height: 40px; border: 0; border-radius: 60px;}
+    .search-form input:focus{outline:none;}
+    .search-form input[type="search"] {flex: 1; min-width: 0;}
+  </style>
+</head>
+<body>
+	<!-- 헤더 시작 -->
+	<header class="header">
+		<!-- 로고 -->
+	  <div class="logo">
+			<a href="./index.html">
+			<img src="./images/main_logo.png" alt="Intact">
+			</a>
+	  </div>
+	  <!-- 네비게이션1 -->
+		<nav class="nav">
+			<ul class="mainmenu">
+				<li><a href="auction.html" class="menu-link">경매
+					<ul class="submenu">
+						<li><a href="#">그래픽</a></li>
+						<li><a href="#">회화</a></li>
+					</ul>
+				</a></li>
+				<li><a href="exhibit.html" class="menu-link">전시회
+					<ul class="submenu">
+						<li><a href="#">그래픽</a></li>
+						<li><a href="#">회화</a></li>
+					</ul>
+				</a></li>
+			</ul>
+	  </nav>
+	  <!-- 검색창 -->
+	  <form class="search-form" action="search.php">
+	  <input type="search">
+	  </form>
+	  <!-- 네비게이션2 -->
+	  <nav class="nav">
+	  	<li><a href="login.html" class="menu-link">로그인</a></li>
+		  <li><a href="join.html" class="menu-link">회원가입</a></li>
+	  </nav>
+	</header>
+	<!-- 헤더 끝 -->
+</body>
+</html>
