@@ -66,7 +66,7 @@
   display:inline-block;
   position: relative;
 }
-.art-img:hover:after,
+/* .art-img:hover:after,
 .art-img:hover > .hover_text
 {
   display:block;
@@ -82,16 +82,31 @@
 }
 .auction-last .auction-last-img > li:hover img{
 	filter: brightness(70%);
-}
+} */
 
-.art-img {
-  overflow: hidden;
-}
 .hover_text {
-  position: absolute;
-  color: #fff;
-  z-index: 20;
-	top: 50%;
+	position: absolute;
+	width: 190px;
+	height: 190px;
+	/* top: 140px;
+	left: 25px; */
+	background: black;
+	color: #fff;
+	z-index: 20;
+	top: 49%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.hover_text {
+	opacity: 0;
+}
+.hover_text:hover {
+	opacity: 1;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+.art-info {
+	height: 70px;
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
