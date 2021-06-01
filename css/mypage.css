@@ -1,11 +1,23 @@
 /* 메인 섹션 */
+.container {
+	max-width: 900px;
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* 메뉴바 */
 .menu {
+	margin-top: 10px;
 	display: flex;
+	flex-wrap: nowrap;
   background: #ffffff;
+	max-width: 900px;
   height: 50px;
+	justify-content: space-around;
   align-items: center;
-	box-shadow: 0px 1px 10px gray;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid #D1D1D1;
 }
 .menu-item {
 	width: 15%;
@@ -19,20 +31,24 @@
 .menu li a:hover{text-decoration: underline;}
 
 /* 메인 컨테이너 */
-.container {
-  display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	margin-bottom: 70px;
-}
 
-/* 내 프로필 */
-.myprofile{
-  padding: 20px;
+/* 프로필 */
+.profile {
+	padding: 10px;
+	padding-bottom: 20px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #D1D1D1;
 }
-.profile-item {
-  display: flex;
-	padding: 30px;
+.my {
+	display: flex;
+	align-items: center;
+}
+.my ul li{
+	display: inline-block;
 }
 .profile-img {
   width: 60px;
@@ -41,92 +57,105 @@
   overflow: hidden;
 	margin-right: 20px;
 }
-#profile-img{
+#profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.myinfo > ul{
-	margin-bottom: 5px;
-}
-.myinfo ul li{
-	float: left;
-}
-.myinfo .name{
-  height: 35px;
-}
-.follow {
-	height: 25px;
-}
-.follow ul{
-	margin-right: 10px;
-}
-.follow ul li{
-	margin-right: 5px;
-}
-/* 자기소개 */
-.introduce {
-	width: 400px;
-	height: 300px;
-	border: 1px solid gray;
-	border-radius: 10px;
-	margin-left: 30px;
+.setting {
 	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #000000;
+	cursor: pointer;
+}
+/* 소개 */
+.introduce {
+	padding: 20px;
+	height: 200px;
+	border-bottom: 1px solid #D1D1D1;
+}
+.introduce #title {
+	margin-bottom: 10px;
 }
 
 /* 게시물 */
-/* 게시물 메뉴 */
-.postmenu {
-	margin-top: 40px;
-}
-.postmenu li{
-	display: inline;
-	margin-left: 20px;
-}
-.postmenu li:hover > ul{display: block;}
-.postmenu li a:hover{text-decoration: underline;}
-.postcount{
+.post {
 	margin-top: 10px;
-	margin-left: 20px;
-	color: gray
+	padding: 20px;
+	padding-bottom: 40px;
+}
+.post select {
+	padding: 10px;
+	width: 221px;
+	height: 50px;
+	background: url("../images/under@2x.png") no-repeat 95% 50%;
+	background-size: 10px;
+	background-color: #ffffff;
+	border: 1px solid #C6C6C6;
+	outline:none;
+	appearance: none;
+}
+.post select::-ms-expand {
+	display: none;
 }
 .post-container {
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.post-container {
-	padding: 14px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  grid-template-rows: repeat(3, minmax(100px, 1fr));
-  row-gap: 20px;
-  column-gap: 20px;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	row-gap: 20px;
+	column-gap: 20px;
+	place-items: center center;
 }
-.auction-container p {text-align: left; font-size: 13px; padding: 20px; margin-left: 25px;}
-
-.auction-container a {
-	margin-top: 20px;
-	flex-grow: 0;
-	flex-basis: 200px;
-	max-width: 200px;
-}
-.auction-container img {
-	height: 200px;
+.post-container .item {
 	width: 200px;
+	height: 200px;
+	background: #F5F5F5;
 }
-.item{
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
+
+/* 좋아하는 작가 페이지*/
+.box {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
-.post-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#author ul {
+	display: flex;
+	align-items: center;
+}
+#author ul li {
+	display: inline-block;
+}
+.author-box {
+	display: grid;
+}
+.box {
+	height: 100px;
+}
+.box label {
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #000000;
+	cursor: pointer;
+}
+
+/* 타 사용자 프로필  */
+.follow button {
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 10px;
+	color: #000000;
+	background: #ffffff;
+	cursor: pointer;
+	border: 0;
+	border: 1px solid #000000;
 }

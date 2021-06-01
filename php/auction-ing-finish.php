@@ -10,47 +10,43 @@
 	<link rel="stylesheet" href="css/layout.css?ver=1">
 	<link rel="stylesheet" href="css/default.css?ver=1">
 	<link rel="stylesheet" href="css/auction-ing.css">
-	<style>
-		.bidding-button label{
-		  top: 48%;
-		}
-	</style>
 </head>
 <body>
 	<div class="main-container">
 		<!-- 헤더 시작 -->
 		<header class="header">
 			<!-- 로고 -->
-		  <div class="logo">
-				<a href="./index-login.html">
+			<div class="logo">
+				<a href="./index.html">
 				<img src="./images/main_logo.png" alt="Intact">
 				</a>
-		  </div>
-		  <!-- 네비게이션1 -->
+			</div>
+			<!-- 네비게이션1 -->
 			<nav class="nav">
 				<ul class="mainmenu">
-					<li><a href="auction-login.html" class="menu-link">경매
+					<li><a href="auction.html" class="menu-link">경매
 						<ul class="submenu">
 							<li><a href="#">그래픽</a></li>
 							<li><a href="#">회화</a></li>
 						</ul>
 					</a></li>
-					<li><a href="exhibit-login.html" class="menu-link">전시회
+					<li><a href="exhibit.html" class="menu-link">전시회
 						<ul class="submenu">
 							<li><a href="#">그래픽</a></li>
 							<li><a href="#">회화</a></li>
 						</ul>
 					</a></li>
 				</ul>
-		  </nav>
-		  <!-- 검색창 -->
-		  <form class="search-form" action="search.php">
-		  <input type="search">
-		  </form>
-		  <!-- 네비게이션2 -->
-		  <nav class="nav">
-		  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
-		  </nav>
+			</nav>
+			<!-- 검색창 -->
+			<form class="search-form" action="search.php">
+			<input type="search">
+			</form>
+			<!-- 네비게이션2 -->
+			<nav class="nav">
+				<li><a href="login.html" class="menu-link">로그인</a></li>
+				<li><a href="join.html" class="menu-link">회원가입</a></li>
+			</nav>
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
@@ -124,16 +120,26 @@
 					</div>
 					<ul class="peddle area1">
 						<li class="bidding-button">
-							<img src="./images/paddle@2x.png" alt="응찰하기">
-							<!-- <img id="finish" src="./images/finish@2x.png" alt="응찰하기"> -->
+							<!-- <img src="./images/paddle@2x.png" alt="응찰하기"> -->
+							<img id="finish" src="./images/finish@2x.png" alt="응찰하기">
 							<div class="bidding">
-								<form action=""><label for="bidding" style="cursor:pointer">응찰하기</label>
-									<input type="button" id="bidding" name="응찰" value="응찰" style="display:none;">
+								<form action=""><label for="bidding" id="modal-btn" style="cursor:pointer"><span style="font-size:15px">응찰 종료</span><br>결과 확인</label>
 								</form>
 							</div>
 						</li>
 					</ul>
 				</div>
+        <div class="modal-bg"></div>
+        <div class="modal-wrap">
+          <div class="modal-close"><a href="#">close</a></div>
+            <div class="modal-content">
+              <ul>
+                <li id="title">응찰 결과</li>
+                <li id="content">낙찰을 축하합니다.</li>
+                <li id="purchase"><a href="purchase.html">구매하기</a></li>
+              </ul>
+            </div>
+        </div>
 				<!-- 실시간 경매 현황 -->
 				<div class="status">
 					<ul class="status-ul">
@@ -199,5 +205,23 @@
 		</div>
 		<!-- 푸터 끝-->
 	</div>
+  <script type="text/javascript">
+    // 모달창 노출 js
+    window.onload = function() {
+
+    function onClick() {
+        document.querySelector('.modal-wrap').style.display ='block';
+        document.querySelector('.modal-bg').style.display ='block';
+    }
+    function offClick() {
+        document.querySelector('.modal-wrap').style.display ='none';
+        document.querySelector('.modal-bg').style.display ='none';
+    }
+
+    document.getElementById('modal-btn').addEventListener('click', onClick);
+    document.querySelector('.modal-close').addEventListener('click', offClick);
+
+    };
+  </script>
 </body>
 </html>

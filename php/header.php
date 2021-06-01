@@ -1,4 +1,4 @@
-<!-- 로그인 후 (마이페이지) 헤더 분리 페이지 -->
+<!-- 헤더 별도 분리 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +54,7 @@
 		ul.submenu {
 			background: #ffffff;
 			width: 70px;
+			z-index: 500;
 		}
 		ul.mainmenu > li:hover ul.submenu {display: block;}
 		ul.mainmenu > li ul.submenu {
@@ -77,20 +78,20 @@
 	<header class="header">
 		<!-- 로고 -->
 	  <div class="logo">
-			<a href="./index-login.html">
+			<a href="./index.html">
 			<img src="./images/main_logo.png" alt="Intact">
 			</a>
 	  </div>
 	  <!-- 네비게이션1 -->
 		<nav class="nav">
 			<ul class="mainmenu">
-				<li><a href="auction-login.html" class="menu-link">경매
+				<li><a href="auction.html" class="menu-link">경매
 					<ul class="submenu">
 						<li><a href="#">그래픽</a></li>
 						<li><a href="#">회화</a></li>
 					</ul>
 				</a></li>
-				<li><a href="exhibit-login.html" class="menu-link">전시회
+				<li><a href="exhibit.html" class="menu-link">전시회
 					<ul class="submenu">
 						<li><a href="#">그래픽</a></li>
 						<li><a href="#">회화</a></li>
@@ -104,7 +105,8 @@
 	  </form>
 	  <!-- 네비게이션2 -->
 	  <nav class="nav">
-	  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
+	  	<li><a href="login.html" class="menu-link">로그인</a></li>
+		  <li><a href="join.html" class="menu-link">회원가입</a></li>
 	  </nav>
 	</header>
 	<!-- 헤더 끝 -->

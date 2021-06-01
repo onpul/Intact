@@ -10,47 +10,48 @@
 	<link rel="stylesheet" href="css/layout.css?ver=1">
 	<link rel="stylesheet" href="css/default.css?ver=1">
 	<link rel="stylesheet" href="css/auction-ing.css">
-	<style>
-		.bidding-button label{
-		  top: 48%;
-		}
-	</style>
 </head>
+<style media="screen">
+.bidding-button label{
+	top: 48%;
+}
+</style>
 <body>
 	<div class="main-container">
 		<!-- 헤더 시작 -->
 		<header class="header">
 			<!-- 로고 -->
-		  <div class="logo">
-				<a href="./index-login.html">
+			<div class="logo">
+				<a href="./index.html">
 				<img src="./images/main_logo.png" alt="Intact">
 				</a>
-		  </div>
-		  <!-- 네비게이션1 -->
+			</div>
+			<!-- 네비게이션1 -->
 			<nav class="nav">
 				<ul class="mainmenu">
-					<li><a href="auction-login.html" class="menu-link">경매
+					<li><a href="auction.html" class="menu-link">경매
 						<ul class="submenu">
 							<li><a href="#">그래픽</a></li>
 							<li><a href="#">회화</a></li>
 						</ul>
 					</a></li>
-					<li><a href="exhibit-login.html" class="menu-link">전시회
+					<li><a href="exhibit.html" class="menu-link">전시회
 						<ul class="submenu">
 							<li><a href="#">그래픽</a></li>
 							<li><a href="#">회화</a></li>
 						</ul>
 					</a></li>
 				</ul>
-		  </nav>
-		  <!-- 검색창 -->
-		  <form class="search-form" action="search.php">
-		  <input type="search">
-		  </form>
-		  <!-- 네비게이션2 -->
-		  <nav class="nav">
-		  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
-		  </nav>
+			</nav>
+			<!-- 검색창 -->
+			<form class="search-form" action="search.php">
+			<input type="search">
+			</form>
+			<!-- 네비게이션2 -->
+			<nav class="nav">
+				<li><a href="login.html" class="menu-link">로그인</a></li>
+				<li><a href="join.html" class="menu-link">회원가입</a></li>
+			</nav>
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->

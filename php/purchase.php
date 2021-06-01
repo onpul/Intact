@@ -1,4 +1,4 @@
-<!-- 로그인 후 구매 페이지 -->
+<!-- 구매 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,6 +86,20 @@
       display: flex;
     }
     .updown { border: 0.1px solid #eee; width: 0px; height: 100px; }
+		/* .purchase {
+			line-height: 40px;
+			text-align: center;
+			width: 100px;
+			height: 100%;
+			background-color: #FFD62C;
+			border-radius: 10%;
+		} */
+		/* .purchase button {
+			border: 1px solid #FFD62C;
+			background-color: #FFD62C;
+			border-radius: 10%;
+			padding: 5px;
+		} */
 		#purchase-btn {
 			width: 200px;
 			height: 60px;
@@ -100,50 +114,57 @@
 </head>
 <body>
 	<div class="main-container">
-    <!-- 헤더 시작 -->
-  	<header class="header">
-  		<!-- 로고 -->
-  	  <div class="logo">
-  			<a href="./index-login.html">
-  			<img src="./images/main_logo.png" alt="Intact">
-  			</a>
-  	  </div>
-  	  <!-- 네비게이션1 -->
-  		<nav class="nav">
-  			<ul class="mainmenu">
-  				<li><a href="auction-login.html" class="menu-link">경매
-  					<ul class="submenu">
-  						<li><a href="#">그래픽</a></li>
-  						<li><a href="#">회화</a></li>
-  					</ul>
-  				</a></li>
-  				<li><a href="exhibit-login.html" class="menu-link">전시회
-  					<ul class="submenu">
-  						<li><a href="#">그래픽</a></li>
-  						<li><a href="#">회화</a></li>
-  					</ul>
-  				</a></li>
-  			</ul>
-  	  </nav>
-  	  <!-- 검색창 -->
-  	  <form class="search-form" action="search.php">
-  	  <input type="search">
-  	  </form>
-  	  <!-- 네비게이션2 -->
-  	  <nav class="nav">
-  	  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
-  	  </nav>
-  	</header>
-  	<!-- 헤더 끝 -->
+		<!-- 헤더 시작 -->
+		<header class="header">
+			<!-- 로고 -->
+			<div class="logo">
+				<a href="./index.html">
+				<img src="./images/main_logo.png" alt="Intact">
+				</a>
+			</div>
+			<!-- 네비게이션1 -->
+			<nav class="nav">
+				<ul class="mainmenu">
+					<li><a href="auction.html" class="menu-link">경매
+						<ul class="submenu">
+							<li><a href="#">그래픽</a></li>
+							<li><a href="#">회화</a></li>
+						</ul>
+					</a></li>
+					<li><a href="exhibit.html" class="menu-link">전시회
+						<ul class="submenu">
+							<li><a href="#">그래픽</a></li>
+							<li><a href="#">회화</a></li>
+						</ul>
+					</a></li>
+				</ul>
+			</nav>
+			<!-- 검색창 -->
+			<form class="search-form" action="search.php">
+			<input type="search">
+			</form>
+			<!-- 네비게이션2 -->
+			<nav class="nav">
+				<li><a href="login.html" class="menu-link">로그인</a></li>
+				<li><a href="join.html" class="menu-link">회원가입</a></li>
+			</nav>
+		</header>
+		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
 		<div class="main">
       <!-- 메뉴바 -->
       <ul class="menu">
   			<li class="menu-item">
-  				<a href="mypage-exhibit.html" class="menu-link">내 프로필</a>
+  				<a href="mypage.html" class="menu-link">내 프로필</a>
   			</li>
   			<li class="menu-item">
-  				<a href="scraping.html" class="menu-link">스크랩</a>
+  				<a href="fav-author.html" class="menu-link">좋아하는 작가</a>
+  			</li>
+  			<li class="menu-item">
+  				<a href="#" class="menu-link">스크랩</a>
+  			</li>
+  			<li class="menu-item">
+  				<a href="#" class="menu-link">장바구니</a>
   			</li>
   		</ul>
       <!-- 메인 컨테이너 -->
