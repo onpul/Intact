@@ -1,4 +1,4 @@
-<!-- 로그인 후 (마이페이지) 헤더 분리 페이지 -->
+<!-- 헤더 별도 분리 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +8,35 @@
 	<title>Intact</title>
 	<link rel="stylesheet" href="css/default.css?ver=1">
   <style>
-    .header{
-      background: #EAEAEA;
+    .header {
+    	width: 100%;
+      background: #FFFFFF;
       height: 100px;
       z-index: 1;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+			box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12);
+			overflow: hidden;
     }
+		.flex-item {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			padding-right: 115px;
+		}
     .nav{
       display: flex;
     }
     /* 로고 */
     .logo {
       cursor: pointer;
-      padding: 10px;
+      padding-left: 115px;
+			padding-right: 50px;
     }
     .logo img {
     	width: 100px;
+			display: block;
 		}
     /* 네비게이션 */
     .nav {
@@ -45,31 +56,62 @@
     }
     .nav li:hover > ul{display: block;}
     .nav li a:hover{text-decoration: underline;}
-		/* 서브메뉴 */
+
 		ul.mainmenu > li {
 			display: inline-block;
 			text-align: center;
 			position: relative;
 		}
-		ul.submenu {
-			background: #ffffff;
-			width: 70px;
+		ul.mainmenu > #auc {
+			margin-right: 60px;
 		}
-		ul.mainmenu > li:hover ul.submenu {display: block;}
-		ul.mainmenu > li ul.submenu {
-			display: none;
-			text-align: left;
-			position: absolute;
-			left: 0;
-		}
-		ul.mainmenu > li ul.submenu > li {
-			display: inline-block;
+		ul.mainmenu > #exh {
+			margin-right: 88px;
 		}
     /* 검색창 */
-    .search-form{display: flex; float: left; min-width: 30%; padding: 30px 30px 30px;}
-    .search-form input{padding: 12px; width: 40%; height: 40px; border: 0; border-radius: 60px;}
+    .search-form {
+			float: left;
+			width: 240px;
+			padding: 30px 30px 30px;
+			margin-right: 40px;
+			position: relative;
+		}
+    .search-form input {
+    	padding: 12px;
+			width: 240px;
+			height: 40px;
+			border: 0;
+			border-radius: 60px;
+			box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+		}
+		.search-form button {
+			background: url("./images/search.png");
+			background-repeat: no-repeat;
+			border: none;
+			width: 12px;
+			height: 14px;
+			cursor: pointer;
+			position: absolute;
+			left: 80%;
+			top: 50%;
+		  transform: translate(-50%, -50%);
+		}
     .search-form input:focus{outline:none;}
     .search-form input[type="search"] {flex: 1; min-width: 0;}
+
+		/* 마이페이지 대신 프로필 사진으로 적용할 경우 프로필 사진 스타일 속성 */
+		.profile-img {
+		  width: 45px;
+		  height: 45px;
+		  border-radius: 70%;
+		  overflow: hidden;
+			margin-right: 20px;
+		}
+		#profile-img {
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		}
   </style>
 </head>
 <body>
@@ -77,35 +119,35 @@
 	<header class="header">
 		<!-- 로고 -->
 	  <div class="logo">
-			<a href="./index-login.html">
+			<a href="./index.html">
 			<img src="./images/main_logo.png" alt="Intact">
 			</a>
 	  </div>
-	  <!-- 네비게이션1 -->
-		<nav class="nav">
-			<ul class="mainmenu">
-				<li><a href="auction-login.html" class="menu-link">경매
-					<ul class="submenu">
-						<li><a href="#">그래픽</a></li>
-						<li><a href="#">회화</a></li>
-					</ul>
-				</a></li>
-				<li><a href="exhibit-login.html" class="menu-link">전시회
-					<ul class="submenu">
-						<li><a href="#">그래픽</a></li>
-						<li><a href="#">회화</a></li>
-					</ul>
-				</a></li>
-			</ul>
-	  </nav>
-	  <!-- 검색창 -->
-	  <form class="search-form" action="search.php">
-	  <input type="search">
-	  </form>
-	  <!-- 네비게이션2 -->
-	  <nav class="nav">
-	  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
-	  </nav>
+		<div class="flex-item">
+		  <!-- 네비게이션1 -->
+			<nav class="nav">
+				<ul class="mainmenu">
+					<li id="auc"><a href="auction.html" class="menu-link">경매
+					</a></li>
+					<li id="exh"><a href="exhibit.html" class="menu-link">전시회
+					</a></li>
+				</ul>
+		  </nav>
+		  <!-- 검색창 -->
+		  <form class="search-form" action="search.php">
+			  <input type="search">
+				<button type="button" name="button"></button>
+		  </form>
+		  <!-- 네비게이션2 -->
+		  <nav class="nav">
+				<!-- 프로필 사진 적용이 안 된다면 마이페이지 텍스트로 -->
+		  	<!-- <li><a href="mypage.html" class="menu-link">마이페이지</a></li> -->
+
+				<!-- 마이페이지 대신 프로필 사진 적용이 가능하다면 프로필 사진으로 -->
+				<a href="mypage.html" class="menu-link"><div class="profile-img"><img id="profile-img" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="프로필 사진"></a>
+				</div>
+		  </nav>
+		</div>
 	</header>
 	<!-- 헤더 끝 -->
 </body>

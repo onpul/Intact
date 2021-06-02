@@ -1,46 +1,28 @@
 /* 메인 섹션 */
 /* 슬라이드 */
-.slide input[id*="slide"] {display:none;}
-.slide .slidewrap {width: 100%; height: 500px; box-shadow: 0px 0px 15px gray;}
-.slide .slidelist {white-space: nowrap; font-size: 0; overflow: hidden; position: relative;}
-.slide .slidelist > li {display: inline-block; vertical-align: middle;  width:100%; transition:all 1.0s;}
-.slide .slidelist > li > a {display:block; position: relative;}
-.slide .slidelist > li > a img {width: 100%; height: 500px;}
-.slide .slidelist label {position: absolute; z-index: 10; top: 50%; transform: translateY(-50%); padding:50px; cursor:pointer;}
+.slide .slidewrap {
+	width: 100%;
+	height: 500px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
+}
 
-/* input에 체크되면 슬라이드 효과 */
-.slide input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
-.slide input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
-.slide input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
-
-/* 좌,우 슬라이드 버튼 */
-.slide-control > div {display:none;}
-.slide .left {left: 30px; background: url('../images/left.png') center center / 40% no-repeat;}
-.slide .left:hover{left: 30px; background: url('../images/left2.png') center center / 40% no-repeat;}
-.slide .right {right: 30px; background: url('../images/right.png') center center / 40% no-repeat;}
-.slide .right:hover {right: 30px; background: url('../images/right2.png') center center / 40% no-repeat;}
-.slide input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
-.slide input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
-.slide input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
-
-/* 아이콘1-마우스 */
-.icon1{padding: 10px; text-align: center;}
-.icon1 img{width: 18px; padding-top: 10px; margin-top: 20px;}
-/* .icon1 img:hover{transform: scale(1.2, 1.2);} */
-.icon1{animation: scroll 0.3s infinite linear alternate;}
-@keyframes scroll {
-	from{
-    transform: translatey(0px);
-  }
-  to{
-    transform: translatey(10px);
-  }
+#auction {
+	margin-top: 250px;
+	text-align: center;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#exhibit {
+	text-align: center;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* 갤러리 컨테이너 */
 .gallery-container {
-	margin-top: 200px;
- 	padding: 50px;
+ 	padding: 80px 77px 200px 77px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -58,74 +40,63 @@
 	height: 200px;
 	width: 200px;
 }
-/* .gallery-container> a:hover img{
-	filter: brightness(70%);
-} */
 
 .art-img{
 	  display:inline-block;
 	  position: relative;
-	}
-	/* .art-img:hover:after,
-	.art-img:hover > .hover_text
-	{
-	  display:block;
-	}
-	.art-img:after,.banner_bg:after,.hover_text{
-	  display:none;
-	} */
-	.art-img {
-	  overflow: hidden;
-	}
-	.hover_text {
-	  position: absolute;
-		width: 190px;
-		height: 190px;
-	  /* top: 140px;
-	  left: 25px; */
-		background: black;
-	  color: #fff;
-	  z-index: 20;
-		top: 49%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-	}
-	.hover_text {
-		opacity: 0;
-	}
-	.hover_text:hover {
-		opacity: 1;
-		background-color:rgba(0, 0, 0, 0.5);
-	}
-	.art-info {
-		height: 70px;
-		margin-top: 60px;
-    margin-bottom: 60px;
-	}
+		overflow: hidden;
+}
+.hover_text {
+  position: absolute;
+	width: 190px;
+	height: 190px;
+	background: black;
+  color: #fff;
+  z-index: 20;
+	top: 49%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.hover_text {
+	opacity: 0;
+}
+.hover_text:hover {
+	opacity: 1;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+.art-info {
+	position: absolute;
+	top: 51%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-size: 11px;
+	height: 132.5px;
+}
+.art-info li {
+	margin-bottom: 10px;
+}
+
 /* 사용자 추천 전시회 */
-.pickslidewrap {box-shadow: 0px 0px 15px gray;}
-.pickslide {width: 70%; margin-left: auto; margin-right: auto; margin-top: 200px; margin-bottom: 200px;}
-.pickslide > p {text-align: center; padding: 50px;}
-.pickslide input[id*="slide"] {display:none;}
-.pickslide .pickslidewrap {width: 100%;}
-.pickslide .picklist {white-space: nowrap; font-size: 0; overflow: hidden; position: relative;}
-.pickslide .picklist > li {display: inline-block; vertical-align: middle;  width:100%; transition:all 1.0s;}
-.pickslide .picklist > li > a {display:block; position: relative;}
-.pickslide .picklist > li > a img {width: 100%; height: 400px;}
-.pickslide .picklist label {position: absolute; z-index: 10; top: 50%; transform: translateY(-50%); padding:50px; cursor:pointer;}
-
-/* input에 체크되면 슬라이드 효과 */
-.pickslide input[id="slide1"]:checked ~ .pickslidewrap .picklist > li {transform:translateX(0%);}
-.pickslide input[id="slide2"]:checked ~ .pickslidewrap .picklist > li {transform:translateX(-100%);}
-.pickslide input[id="slide3"]:checked ~ .pickslidewrap .picklist > li {transform:translateX(-200%);}
-
-/* 좌,우 슬라이드 버튼 */
-.pickslide-control > div {display:none;}
-.pickslide .left {left: 30px; background: url('../images/left.png') center center / 40% no-repeat;}
-.pickslide .left:hover {left: 30px; background: url('../images/left2.png') center center / 40% no-repeat;}
-.pickslide .right {right: 30px; background: url('../images/right.png') center center / 40% no-repeat;}
-.pickslide .right:hover {right: 30px; background: url('../images/right2.png') center center / 40% no-repeat;}
-.pickslide input[id="slide1"]:checked ~ .pickslidewrap .pickslide-control > div:nth-child(1) {display:block;}
-.pickslide input[id="slide2"]:checked ~ .pickslidewrap .pickslide-control > div:nth-child(2) {display:block;}
-.pickslide input[id="slide3"]:checked ~ .pickslidewrap .pickslide-control > div:nth-child(3) {display:block;}
+/* (슬라이드 자리) */
+.pickslide {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	margin-bottom: 200px;
+}
+.pickslide > p {
+	text-align: center;
+	padding: 50px;
+}
+.pickslidewrap {
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	height: 450px;
+	background: #eeeeee;
+}

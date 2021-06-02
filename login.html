@@ -45,11 +45,11 @@
     }
     .login-box input{
     	border: none;
-    	width:440px;
+    	width: 440px;
     	margin-top: 8px;
     	font-size: 12px;
     	margin-left: 12px;
-    	height:30px;
+    	height: 30px;
 			outline: none;
     }
 		.password-box{
@@ -75,8 +75,8 @@
 			margin-top: 15px;
     	font-size: 18px;
 			color: white;
-    	background: #FF7F00;
-    	border: solid 1px #FF7F00;
+    	background: #000000;
+    	border: solid 1px #000000;
       border-radius: 10px;
 			cursor: pointer;
     }
@@ -105,32 +105,26 @@
 				<img src="./images/main_logo.png" alt="Intact">
 				</a>
 		  </div>
-		  <!-- 네비게이션1 -->
-			<nav class="nav">
-				<ul class="mainmenu">
-					<li><a href="auction.html" class="menu-link">경매
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-					<li><a href="exhibit.html" class="menu-link">전시회
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-				</ul>
-		  </nav>
-		  <!-- 검색창 -->
-		  <form class="search-form" action="search.php">
-		  <input type="search">
-		  </form>
-		  <!-- 네비게이션2 -->
-		  <nav class="nav">
-		  	<li><a href="login.html" class="menu-link">로그인</a></li>
-			  <li><a href="join.html" class="menu-link">회원가입</a></li>
-		  </nav>
+			<div class="flex-item">
+			  <!-- 네비게이션1 -->
+				<nav class="nav">
+					<ul class="mainmenu">
+						<li id="auc"><a href="auction.html" class="menu-link">경매
+						</a></li>
+						<li id="exh"><a href="exhibit.html" class="menu-link">전시회
+						</a></li>
+					</ul>
+			  </nav>
+			  <!-- 검색창 -->
+			  <form class="search-form" action="search.php">
+				  <input type="search">
+					<button type="button" name="button"></button>
+			  </form>
+			  <!-- 네비게이션2 -->
+			  <nav class="nav">
+			  	<li><a href="login.html" class="menu-link">로그인</a></li>
+			  </nav>
+			</div>
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
@@ -159,13 +153,10 @@
 		</main>
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
-		<div class="footer">
-			<!-- <address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
-			</address> -->
+		<!-- <div class="footer">
 			<p>Copyright(c)2021 Intact㈜ Intact Co., Ltd. All Rights Reserved</p>
-		</div>
+		</div> -->
 		<!-- 푸터 끝-->
 	</div>
-<script src="script1.js"></script>
 </body>
 </html>

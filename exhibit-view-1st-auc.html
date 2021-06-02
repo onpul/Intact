@@ -16,7 +16,7 @@
     }
     body {
       height: 100vh;
-      background-image: url("./images/space-side.jpg");
+      background-image: url("./images/space-right.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
@@ -137,7 +137,7 @@
       transform: translate(-50%, -50%);
     }
     /* .info ul li{
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     } */
     .info #content{
       height: 200px;
@@ -212,24 +212,24 @@
       object-fit: cover;
     }
     #heart {
-      margin-top: 10px;
-      margin-right: 20px;
+      margin-top: 20px;
       margin-bottom: 20px;
-      background: url("./images/like_1@2x.png") no-repeat;
+      background: url("./images/heart@2x.png") no-repeat;
       border: none;
       cursor: pointer;
       width: 24px;
       height: 24px;
     }
     #scrap {
+      margin-left: 3px;
       margin-right: 20px;
-      background: url("./images/scrap_1@2x.png") no-repeat;
+      background: url("./images/scrap@2x.png") no-repeat;
       border: none;
       cursor: pointer;
       width: 24px;
       height: 24px;
     }
-    #purchase a{
+    #go-auc a{
       width: 200px;
       height: 20px;
       padding: 5px;
@@ -238,7 +238,7 @@
       border-radius: 10px;
       box-shadow: 0px 0px 5px lightgray;
     }
-    ul.cost li{
+    ul.auc li{
       margin-bottom: 10px;
     }
   </style>
@@ -250,14 +250,14 @@
       <!-- 왼쪽 사이드바 안에 그리드는 area1로 나눔 -->
       <div class="area1">
         <a href="./index.html">
-        <img id="logo" src="./images/small_logo.png" alt="Intact">
+        <img id="logo" src="./images/small_logo@2x.png" alt="Intact">
         </a>
       </div>
-      <div class="area1 move2" OnClick="location.href='exhibit-view-1st-info.html'" style="cursor:pointer;">
+      <!-- <div class="area1 move2" OnClick="location.href='exhibit-view-1st-info.html'" style="cursor:pointer;">
       </div>
       <div class="area1 prev" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">
         <img id="prev" src="./images/previous@2x.png" alt="">
-      </div>
+      </div> -->
     </div>
     <!-- 메인 -->
     <div class="main area">
@@ -265,20 +265,20 @@
       <div class="art area2">
         <!-- 작품 이미지 -->
         <div class="art-img">
-          <img id="art-img" src="./images/sample1.jpg" alt="작품 이미지">
+          <img id="art-img" src="./images/sample6.jpg" alt="작품 이미지">
         </div>
       </div>
       <!-- 작품 정보 -->
-      <div class="info area2" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">
+      <div class="info area2" OnClick="location.href='exhibit-view-1st.html'" style="cursor:pointer;">
         <div class="art-info">
           <div id="art-info">
-            <ul>
+            <ul class="info-box">
               <li id="name">작품 제목</li>
               <li id="content"><div>작품 설명</div></li>
             </ul>
-            <ul class="cost">
-              <li id="cost">가격: 10,000원</li>
-              <li id="purchase"><a href="purchase.html">구매하기</a></li>
+            <ul class="auc">
+              <li id="cost">경매 진행</li>
+              <li id="go-auc"><a href="auction-ing.html">경매 바로가기</a></li>
             </ul>
           </div>
         </div>
@@ -288,7 +288,7 @@
     <div class="sidebar-right area">
       <!-- 메인 안에 그리드는 area3로 나눔 -->
       <div class="author area3">
-        <a href="#">
+        <a href="mypage-others.html">
           <ul>
             <li>작가명</li>
             <li>작가 소개글</li>
@@ -305,7 +305,7 @@
         </form>
       </div>
       <div class="next area3" OnClick="location.href='exhibit-view-2nd.html'" style="cursor:pointer;">
-        <img id="next" src="./images/next@2x.png" alt="">
+        <img id="next" src="./images/right@2x.png" alt="">
       </div>
     </div>
   </div>

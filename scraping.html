@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="css/layout.css?ver=1">
 	<link rel="stylesheet" href="css/default.css?ver=1">
 	<style>
+		.menu #scrap{
+			font-weight: bold;
+			border-bottom: 2px solid #000000;
+		}
 		/* 메인 스크랩 스타일 */
 		.scraping {
 			padding: 30px;
@@ -29,6 +33,22 @@
 			cursor: pointer;
 			background-color: #eee;
 		}
+		.art-info {
+			text-align: left;
+			background-color: #000000;
+			padding-left: 15px;
+			width: 100%;
+			height: 60px;
+			line-height: 60px;
+			color: #ffffff;
+			position: absolute;
+			opacity: 0;
+			bottom: 0;
+			z-index: 5;
+		}
+		.item:hover .art-info {
+			opacity: 0.59;
+		}
 		.scraping {
 			margin-top: 70px;
 			margin-bottom: 70px;
@@ -42,20 +62,6 @@
 			bottom: 0;
 			overflow: hidden;
 		}
-		.art-info {
-			text-align: left;
-			background-color: #ffffff;
-			width: 100%;
-			height: 60px;
-			color: black;
-			position: absolute;
-			opacity: 0;
-			bottom: 0;
-			z-index: 5;
-		}
-		.item:hover .art-info {
-			opacity: 0.8;
-		}
 	</style>
 </head>
 <body>
@@ -64,49 +70,49 @@
 		<header class="header">
 			<!-- 로고 -->
 		  <div class="logo">
-				<a href="./index-login.html">
+				<a href="./index.html">
 				<img src="./images/main_logo.png" alt="Intact">
 				</a>
 		  </div>
-		  <!-- 네비게이션1 -->
-			<nav class="nav">
-				<ul class="mainmenu">
-					<li><a href="auction-login.html" class="menu-link">경매
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-					<li><a href="exhibit-login.html" class="menu-link">전시회
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-				</ul>
-		  </nav>
-		  <!-- 검색창 -->
-		  <form class="search-form" action="search.php">
-		  <input type="search">
-		  </form>
-		  <!-- 네비게이션2 -->
-		  <nav class="nav">
-		  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
-		  </nav>
+			<div class="flex-item">
+			  <!-- 네비게이션1 -->
+				<nav class="nav">
+					<ul class="mainmenu">
+						<li id="auc"><a href="auction.html" class="menu-link">경매
+						</a></li>
+						<li id="exh"><a href="exhibit.html" class="menu-link">전시회
+						</a></li>
+					</ul>
+			  </nav>
+			  <!-- 검색창 -->
+			  <form class="search-form" action="search.php">
+				  <input type="search">
+					<button type="button" name="button"></button>
+			  </form>
+			  <!-- 네비게이션2 -->
+			  <nav class="nav">
+					<!-- 프로필 사진 적용이 안 된다면 마이페이지 텍스트로 -->
+			  	<!-- <li><a href="mypage.html" class="menu-link">마이페이지</a></li> -->
+
+					<!-- 마이페이지 대신 프로필 사진 적용이 가능하다면 프로필 사진으로 -->
+					<a href="mypage.html" class="menu-link"><div class="profile-img"><img id="profile-img" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="프로필 사진"></a>
+					</div>
+			  </nav>
+			</div>
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
 		<div class="main">
       <!-- 메뉴바 -->
 			<!-- 메뉴바 -->
-      <ul class="menu">
-  			<li class="menu-item">
-  				<a href="mypage.html" class="menu-link">내 프로필</a>
+			<ul class="menu">
+  			<li class="menu-item" id="profile">
+  				<a href="mypage.html" class="menu-link">프로필</a>
   			</li>
-				<li class="menu-item">
+				<li class="menu-item" id="fav">
   				<a href="fav-author.html" class="menu-link">좋아하는 작가</a>
   			</li>
-  			<li class="menu-item">
+  			<li class="menu-item" id="scrap">
   				<a href="scraping.html" class="menu-link">스크랩</a>
   			</li>
   		</ul>
@@ -115,62 +121,52 @@
 				<div class="scraping">
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 					<div class="item"><a href="exhibit-intro.html"><img id="scrap-img" src="" alt="작품">
 						<ul class="art-info">
-							<li>전시회 제목</li>
-							<li>작가명</li>
+							<li>작품명</li>
 						</ul>
 					</a></div>
 				</div>

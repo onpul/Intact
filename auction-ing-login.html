@@ -22,35 +22,35 @@
 		<header class="header">
 			<!-- 로고 -->
 		  <div class="logo">
-				<a href="./index-login.html">
+				<a href="./index.html">
 				<img src="./images/main_logo.png" alt="Intact">
 				</a>
 		  </div>
-		  <!-- 네비게이션1 -->
-			<nav class="nav">
-				<ul class="mainmenu">
-					<li><a href="auction-login.html" class="menu-link">경매
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-					<li><a href="exhibit-login.html" class="menu-link">전시회
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-				</ul>
-		  </nav>
-		  <!-- 검색창 -->
-		  <form class="search-form" action="search.php">
-		  <input type="search">
-		  </form>
-		  <!-- 네비게이션2 -->
-		  <nav class="nav">
-		  	<li><a href="mypage.html" class="menu-link">마이페이지</a></li>
-		  </nav>
+			<div class="flex-item">
+			  <!-- 네비게이션1 -->
+				<nav class="nav">
+					<ul class="mainmenu">
+						<li id="auc"><a href="auction.html" class="menu-link">경매
+						</a></li>
+						<li id="exh"><a href="exhibit.html" class="menu-link">전시회
+						</a></li>
+					</ul>
+			  </nav>
+			  <!-- 검색창 -->
+			  <form class="search-form" action="search.php">
+				  <input type="search">
+					<button type="button" name="button"></button>
+			  </form>
+			  <!-- 네비게이션2 -->
+			  <nav class="nav">
+					<!-- 프로필 사진 적용이 안 된다면 마이페이지 텍스트로 -->
+			  	<!-- <li><a href="mypage.html" class="menu-link">마이페이지</a></li> -->
+
+					<!-- 마이페이지 대신 프로필 사진 적용이 가능하다면 프로필 사진으로 -->
+					<a href="mypage.html" class="menu-link"><div class="profile-img"><img id="profile-img" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="프로필 사진"></a>
+					</div>
+			  </nav>
+			</div>
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->

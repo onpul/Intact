@@ -1,56 +1,47 @@
 /* 메인 섹션 */
-/* 슬라이드 */
-.slide input[id*="slide"] {display:none;}
-.slide .slidewrap {width: 100%; height: 500px; box-shadow: 0px 0px 15px gray;}
-.slide .slidelist {white-space: nowrap; font-size: 0; overflow: hidden; position: relative;}
-.slide .slidelist > li {display: inline-block; vertical-align: middle;  width:100%; transition:all 1.0s;}
-.slide .slidelist > li > a {display:block; position: relative;}
-.slide .slidelist > li > a img {width: 100%; height: 500px;}
-.slide .slidelist label {position: absolute; z-index: 10; top: 50%; transform: translateY(-50%); padding:50px; cursor:pointer;}
-
-/* input에 체크되면 슬라이드 효과 */
-.slide input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
-.slide input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
-.slide input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
-
-/* 좌,우 슬라이드 버튼 */
-.slide-control > div {display:none;}
-.slide .left {left: 30px; background: url('../images/left.png') center center / 40% no-repeat;}
-.slide .left:hover{left: 30px; background: url('../images/left2.png') center center / 40% no-repeat;}
-.slide .right {right: 30px; background: url('../images/right.png') center center / 40% no-repeat;}
-.slide .right:hover {right: 30px; background: url('../images/right2.png') center center / 40% no-repeat;}
-.slide input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
-.slide input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
-.slide input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
-
-/* 아이콘1-마우스 */
-.icon1{padding: 10px; text-align: center;}
-.icon1 img{width: 18px; padding-top: 10px;}
-/* .icon1 img:hover{transform: scale(1.2, 1.2);} */
-.icon1{animation: scroll 0.3s infinite linear alternate;}
-@keyframes scroll {
-	from{
-    transform: translatey(0px);
-  }
-  to{
-    transform: translatey(10px);
-  }
+/* 셀렉트 박스 */
+.select {
+  padding-top: 70px;
+	padding-left: 70px;
+	padding-bottom: 100px;
 }
-
+.select select {
+	padding: 10px;
+	width: 220px;
+	height: 50px;
+	background: url("../images/under@2x.png") no-repeat 95% 50%;
+	background-size: 10px;
+	background-color: #ffffff;
+	border: 1px solid #C6C6C6;
+	outline:none;
+	appearance: none;
+}
+select::-ms-expand {
+	display: none;
+}
 /* 경매 컨테이너 */
 .auction-pre {margin-bottom: 70px;}
 .auction-ing {margin-bottom: 70px;}
 .auction-last {margin-bottom: 70px;}
 
 .auction-container {
-	margin-top: 100px;
- 	padding: 50px;
+ 	padding: 70px;
 }
-.auction-container p {
+.auction-pre p {
+	padding-left: 70px;
+	padding-bottom: 20px;
+}
+.auction-ing p {
+	padding-left: 70px;
+	padding-bottom: 20px;
+}
+.auction-last p {
 	padding-left: 70px;
 	padding-bottom: 20px;
 }
 .auction-container img {
+	background: #F7F7F7;
+	border: none;
 	height: 200px;
 	width: 200px;
 }
@@ -59,37 +50,14 @@
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
-.art-info {
-	text-align: center;
-}
 .art-img{
   display:inline-block;
   position: relative;
 }
-/* .art-img:hover:after,
-.art-img:hover > .hover_text
-{
-  display:block;
-}
-.art-img:after,.hover_text{
-  display:none;
-}
-.auction-pre .auction-pre-img > li:hover img{
-	filter: brightness(70%);
-}
-.auction-ing .auction-ing-img > li:hover img{
-	filter: brightness(70%);
-}
-.auction-last .auction-last-img > li:hover img{
-	filter: brightness(70%);
-} */
-
 .hover_text {
 	position: absolute;
 	width: 190px;
 	height: 190px;
-	/* top: 140px;
-	left: 25px; */
 	background: black;
 	color: #fff;
 	z-index: 20;
@@ -103,10 +71,33 @@
 }
 .hover_text:hover {
 	opacity: 1;
-	background-color:rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .art-info {
-	height: 70px;
-	margin-top: 60px;
-	margin-bottom: 60px;
+	position: absolute;
+	top: 51%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-size: 11px;
+	height: 132.5px;
+}
+.art-info li {
+	margin-bottom: 10px;
+}
+.plus-button {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.plus-button p {
+	line-height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 220px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #C6C6C6;
 }

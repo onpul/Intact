@@ -19,20 +19,26 @@ body{
 }
 .main{
 	/* height: 100%; */
+	/* margin-top: 10px; */
 }
-.header{
-	background: #ffffff;
+/* 헤더 */
+.header {
+	position: relative;
+	width: 100%;
+	background: #FFFFFF;
 	height: 100px;
+	z-index: 50;
+	display: flex;
+	align-items: center;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12);
+	overflow: hidden;
+}
+.flex-item {
 	width: 100%;
 	display: flex;
-	align-items: flex-end;
-	justify-content: space-around;
-	position: absolute;
-	z-index: 30;
-	box-shadow: 0px 1px 10px gray;
-}
-.main{
-	padding-top: 100px;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 115px;
 }
 .nav{
 	display: flex;
@@ -40,10 +46,12 @@ body{
 /* 로고 */
 .logo {
 	cursor: pointer;
+	padding-left: 115px;
+	padding-right: 50px;
 }
 .logo img {
+	width: 100px;
 	display: block;
-	width: 120px;
 }
 /* 네비게이션 */
 .nav {
@@ -62,33 +70,65 @@ body{
 	font-size: 12px;
 }
 .nav li:hover > ul{display: block;}
-.nav li a:hover{text-decoration: underline; color: #41842F;}
-/* 서브메뉴 */
+.nav li a:hover{text-decoration: underline;}
+
 ul.mainmenu > li {
 	display: inline-block;
 	text-align: center;
 	position: relative;
 }
-ul.submenu {
-	background: #ffffff;
-	width: 70px;
-	z-index: 500;
+ul.mainmenu > #auc {
+	margin-right: 60px;
 }
-ul.mainmenu > li:hover ul.submenu {display: block;}
-ul.mainmenu > li ul.submenu {
-	display: none;
-	text-align: left;
-	position: absolute;
-	left: 0;
-}
-ul.mainmenu > li ul.submenu > li {
-	display: inline-block;
+ul.mainmenu > #exh {
+	margin-right: 88px;
 }
 /* 검색창 */
-.search-form{display: flex; float: left; min-width: 30%; padding: 30px 30px 30px;}
-.search-form input{padding: 12px; width: 40%; height: 40px; border: 0; border-radius: 60px; box-shadow: 1px 2px 6px gray;}
+.search-form {
+	float: left;
+	width: 240px;
+	padding: 30px 30px 30px;
+	margin-right: 40px;
+	position: relative;
+}
+.search-form input {
+	padding: 12px;
+	width: 240px;
+	height: 40px;
+	border: 0;
+	border-radius: 60px;
+	box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.search-form button {
+	background: url("../images/search.png");
+	background-repeat: no-repeat;
+	border: none;
+	width: 12px;
+	height: 14px;
+	cursor: pointer;
+	position: absolute;
+	left: 80%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
 .search-form input:focus{outline:none;}
 .search-form input[type="search"] {flex: 1; min-width: 0;}
+
+/* 로그인 후 헤더 속성 (header2.html) */
+/* 마이페이지 대신 프로필 사진으로 적용할 경우 프로필 사진 스타일 속성 */
+.profile-img {
+	width: 45px;
+	height: 45px;
+	border-radius: 70%;
+	overflow: hidden;
+	margin-right: 20px;
+}
+#profile-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 /* 푸터 */
 .footer{
 	position: absolute;

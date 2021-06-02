@@ -20,111 +20,189 @@
 				<img src="./images/main_logo.png" alt="Intact">
 				</a>
 		  </div>
-		  <!-- 네비게이션1 -->
-			<nav class="nav">
-				<ul class="mainmenu">
-					<li><a href="auction.html" class="menu-link">경매
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-					<li><a href="exhibit.html" class="menu-link">전시회
-						<ul class="submenu">
-							<li><a href="#">그래픽</a></li>
-							<li><a href="#">회화</a></li>
-						</ul>
-					</a></li>
-				</ul>
-		  </nav>
-		  <!-- 검색창 -->
-		  <form class="search-form" action="search.php">
-		  <input type="search">
-		  </form>
-		  <!-- 네비게이션2 -->
-		  <nav class="nav">
-		  	<li><a href="login.html" class="menu-link">로그인</a></li>
-			  <li><a href="join.html" class="menu-link">회원가입</a></li>
-		  </nav>
+			<div class="flex-item">
+			  <!-- 네비게이션1 -->
+				<nav class="nav">
+					<ul class="mainmenu">
+						<li id="auc"><a href="auction.html" class="menu-link">경매
+						</a></li>
+						<li id="exh"><a href="exhibit.html" class="menu-link">전시회
+						</a></li>
+					</ul>
+			  </nav>
+			  <!-- 검색창 -->
+			  <form class="search-form" action="search.php">
+				  <input type="search">
+					<button type="button" name="button"></button>
+			  </form>
+			  <!-- 네비게이션2 -->
+			  <nav class="nav">
+			  	<li><a href="login.html" class="menu-link">로그인</a></li>
+			  </nav>
+			</div>
 		</header>
 		<!-- 헤더 끝 -->
 		<!-- 메인 시작 -->
 		<div class="main">
-			<div class="slide">
-				<input type="radio" name="slide" id="slide01" checked>
-				<input type="radio" name="slide" id="slide02">
-				<input type="radio" name="slide" id="slide03">
-				<!-- 슬라이드 영역 -->
-				<div class="slidewrap">
-					<ul class="slidelist">
-						<li class="slideitem">
-							<a><img src="./images/ex1.jpg"></a>
-						</li>
-						<li class="slideitem">
-							<a><img src="./images/ex2.jpg"></a>
-						</li>
-						<li class="slideitem">
-							<a><img src="./images/ex3.jpg"></a>
-						</li class="slideitem">
-						<!-- 좌, 우 슬라이드 버튼 -->
-						<div class="slide-control">
-							<div>
-								<label for="slide03" class="left"></label>
-								<label for="slide02" class="right"></label>
-							</div>
-							<div>
-								<label for="slide01" class="left"></label>
-								<label for="slide03" class="right"></label>
-							</div>
-							<div>
-								<label for="slide02" class="left"></label>
-								<label for="slide01" class="right"></label>
-							</div>
-						</div>
-					</ul>
-				</div>
+      <!-- 전시 정보  -->
+			<div class="select">
+				<select class="post-menu" name="menu" onchange="location.href=(this.value);">
+					<option value="exhibit.html"><a href="exhibit.html">회화 작품</a></option>
+					<option value="exhibit-digital.html"><a href="exhibit-digital.html">디지털 작품</a></option>
+				</select>
 			</div>
-			<!-- icon1 -->
-			<div class="icon1">
-				<a href="#">
-				<img src="./images/scroll.png" alt="더 많은 추천작을 보려면">
-				<p>스크롤</p>
+      <div class="art-info-container">
+				<a href="exhibit-intro.html">
+        <div class="art">
+					<div class="profile area">
+						<div class="profile-img">
+							<img id="profile-img" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="프로필 사진">
+						</div>
+					</div>
+					<div class="info area">
+						<ul>
+							<li>전시회 타이틀</li>
+							<li>작가 이름</li>
+						</ul>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+        </div>
+				</a>
+				<a href="exhibit-intro.html">
+        <div class="art">
+					<div class="profile area">
+						<div class="profile-img">
+							<img id="profile-img" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="프로필 사진">
+						</div>
+					</div>
+					<div class="info area">
+						<ul>
+							<li>전시회 타이틀</li>
+							<li>작가 이름</li>
+						</ul>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+        </div>
+				</a>
+				<a href="exhibit-intro.html">
+        <div class="art">
+					<div class="profile area">
+						<div class="profile-img">
+							<img id="profile-img" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="프로필 사진">
+						</div>
+					</div>
+					<div class="info area">
+						<ul>
+							<li>전시회 타이틀</li>
+							<li>작가 이름</li>
+						</ul>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+        </div>
+				</a>
+				<a href="exhibit-intro.html">
+        <div class="art">
+					<div class="profile area">
+						<div class="profile-img">
+							<img id="profile-img" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="프로필 사진">
+						</div>
+					</div>
+					<div class="info area">
+						<ul>
+							<li>전시회 타이틀</li>
+							<li>작가 이름</li>
+						</ul>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+					<div class="artimg area">
+						<div class="art-img">
+							<img id="art-img" src="" alt="작품 사진">
+						</div>
+					</div>
+        </div>
 				</a>
 			</div>
-      <!-- 전시 정보  -->
-      <div class="art-info-container">
-        <div class="art">
-        	<a class="art-a" href="exhibit-intro.html"><img class="art-img" src="./images/sample1.jpg" alt="작품1"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-        </div>
-        <div class="art">
-        	<a class="art-a" href="exhibit-intro.html"><img class="art-img" src="./images/sample2.jpg" alt="작품2"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-        </div>
-        <div class="art">
-        	<a class="" href="exhibit-intro.html"><img class="art-img" src="./images/sample3.jpg" alt="작품3"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-        </div>
-        <div class="art">
-        	<a class="" href="exhibit-intro.html"><img class="art-img" src="./images/sample4.jpg" alt="작품4"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-        </div>
-        <div class="art">
-        	<a class="" href="exhibit-intro.html"><img class="art-img" src="./images/sample5.jpg" alt="작품5"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-        </div>
-        <div class="art">
-        	<a class="" href="exhibit-intro.html"><img class="art-img" src="./images/sample6.jpg" alt="작품6"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-        </div>
-        <div class="art">
-        	<a class="" href="exhibit-intro.html"><img class="art-img" src="https://i.pinimg.com/originals/cf/34/f0/cf34f0af5496bf6eadda07c8042b9279.png" alt="작품7"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-        </div>
-        <div class="art">
-        	<a class="" href="exhibit-intro.html"><img class="art-img" src="https://i.pinimg.com/originals/cf/34/f0/cf34f0af5496bf6eadda07c8042b9279.png" alt="작품8"><div class="hover_text"><ul class="art-info"><li>작품명</li><li>작가명</li><li>작품기간</li></ul></div></a>
-      </div>
+			<div class="plus-button">
+				<p>더보기 +</p>
+			</div>
+			<!-- 전시 정보 끝 -->
 		</div>
 		<!-- 메인 끝 -->
 		<!-- 푸터 시작 -->
-		<div class="footer">
-			<!-- <address>(14097)경기도 안양시 만안구 성결대학로 53 TEL (031)467-8114
-			</address> -->
+		<!-- <div class="footer">
 			<p>Copyright(c)2021 Intact㈜ Intact Co., Ltd. All Rights Reserved</p>
-		</div>
+		</div> -->
 		<!-- 푸터 끝-->
 	</div>
 </body>
